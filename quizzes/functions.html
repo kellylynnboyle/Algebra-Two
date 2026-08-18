@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Functions Quiz — Algebra II</title>
+<link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+<div class="quiz-container">
+  <a class="quiz-back" href="../functions.md">&larr; Back to notes</a>
+  <h1 id="quiz-title"></h1>
+  <div id="quiz-root"></div>
+</div>
+<script>
+window.QUIZ_TITLE = "Functions Quiz";
+window.QUIZ_DATA = [
+  {
+    question: "A graph is drawn so that a vertical line at x = 3 crosses the curve at two points: y = 1 and y = 4. What does this tell you?",
+    choices: [
+      "The relation is not a function, since x = 3 has two different outputs",
+      "It is a function, since y = 1 and y = 4 are both valid outputs",
+      "It is a function as long as x = 3 is excluded from the domain",
+      "The domain is restricted to just y = 1 and y = 4"
+    ],
+    correctIndex: 0,
+    explanation: "A function requires every input to map to exactly one output. Since x = 3 maps to both y = 1 and y = 4, the relation fails the vertical line test and is not a function."
+  },
+  {
+    question: "If f(x) = 2x + 3, what is f(5)?",
+    choices: [
+      "13",
+      "16",
+      "10",
+      "8"
+    ],
+    correctIndex: 0,
+    explanation: "Substitute x = 5: f(5) = 2(5) + 3 = 10 + 3 = 13. (16 comes from mistakenly computing 2(5+3); 10 comes from forgetting to add the 3.)"
+  },
+  {
+    question: "What is the domain of f(x) = √(x − 4)?",
+    choices: [
+      "x ≥ 4",
+      "x ≤ 4",
+      "x ≥ −4",
+      "x ≠ 4"
+    ],
+    correctIndex: 0,
+    explanation: "The radicand can't be negative, so x − 4 ≥ 0, which gives x ≥ 4. Flipping the inequality (x ≤ 4) or the sign inside (x ≥ −4) are common slip-ups."
+  },
+  {
+    question: "What is the domain of g(x) = 5/(x² − 9)?",
+    choices: [
+      "x ≠ 3 and x ≠ −3",
+      "x ≠ 9 and x ≠ −9",
+      "x ≠ 3 only",
+      "x ≥ 3"
+    ],
+    correctIndex: 0,
+    explanation: "The denominator can't be zero: x² − 9 ≠ 0 → x² ≠ 9 → x ≠ 3 and x ≠ −3. Using 9 and −9 directly (without taking the square root) is a common error."
+  },
+  {
+    question: "For the piecewise function f(x) = x + 1 if x < 0; x² if 0 ≤ x < 3; 7 if x ≥ 3, what is f(−2)?",
+    choices: [
+      "−1",
+      "4",
+      "7",
+      "−2"
+    ],
+    correctIndex: 0,
+    explanation: "Since −2 < 0, use the first piece: f(−2) = −2 + 1 = −1. Choosing 4 or 7 means applying the wrong piece for this input."
+  },
+  {
+    question: "Given f(x) = x − 2 and g(x) = x², what is (f ∘ g)(x)?",
+    choices: [
+      "x² − 2",
+      "x² − 4x + 4",
+      "x³ − 2x²",
+      "x² − 2x"
+    ],
+    correctIndex: 0,
+    explanation: "(f ∘ g)(x) = f(g(x)) = g(x) − 2 = x² − 2. x² − 4x + 4 is actually (g ∘ f)(x) — the wrong composition order — and x³ − 2x² comes from multiplying f(x) · g(x) instead of composing."
+  },
+  {
+    question: "What is the inverse of f(x) = 3x − 4?",
+    choices: [
+      "f⁻¹(x) = (x + 4)/3",
+      "f⁻¹(x) = (x − 4)/3",
+      "f⁻¹(x) = 3x + 4",
+      "f⁻¹(x) = (4 − x)/3"
+    ],
+    correctIndex: 0,
+    explanation: "Swap x and y in y = 3x − 4 to get x = 3y − 4, then solve: x + 4 = 3y, so y = (x + 4)/3. (x − 4)/3 comes from forgetting to swap the sign when isolating y."
+  },
+  {
+    question: "Is f(x) = x⁴ − 3x² even, odd, or neither?",
+    choices: [
+      "Even",
+      "Odd",
+      "Neither",
+      "Cannot be determined without a graph"
+    ],
+    correctIndex: 0,
+    explanation: "f(−x) = (−x)⁴ − 3(−x)² = x⁴ − 3x² = f(x), so f(−x) = f(x) for all x, which is the definition of an even function."
+  },
+  {
+    question: "If f(x) = x² − 4x, what is f(x + 2)?",
+    choices: [
+      "x² − 4",
+      "x² − 4x + 2",
+      "x² + 4x − 4",
+      "x² − 8x + 4"
+    ],
+    correctIndex: 0,
+    explanation: "Substitute (x + 2) for every x: f(x+2) = (x+2)² − 4(x+2) = x² + 4x + 4 − 4x − 8 = x² − 4. The choice x² − 4x + 2 is the classic trap of computing f(x) + 2 instead of substituting into f."
+  },
+  {
+    question: "If f(x) = √x and g(x) = x − 9, what is the domain of (f ∘ g)(x)?",
+    choices: [
+      "x ≥ 9",
+      "All real numbers",
+      "x ≥ 0",
+      "x > 9"
+    ],
+    correctIndex: 0,
+    explanation: "(f ∘ g)(x) = √(x − 9), which requires x − 9 ≥ 0, so x ≥ 9. Answering 'all real numbers' comes from checking only g's domain (g has no restriction) and forgetting that g(x) also has to land inside f's domain."
+  }
+];
+</script>
+<script src="quiz.js"></script>
+</body>
+</html>

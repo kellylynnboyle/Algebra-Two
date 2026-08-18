@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Polynomials Quiz — Algebra II</title>
+<link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+<div class="quiz-container">
+  <a class="quiz-back" href="../polynomials.md">&larr; Back to notes</a>
+  <h1 id="quiz-title"></h1>
+  <div id="quiz-root"></div>
+</div>
+<script>
+window.QUIZ_TITLE = "Polynomials Quiz";
+window.QUIZ_DATA = [
+  {
+    question: "What is the degree and leading coefficient of 3x^4 - 5x^2 + 2x - 7?",
+    choices: [
+      "Degree 4, leading coefficient 3",
+      "Degree 4, leading coefficient -7",
+      "Degree 2, leading coefficient -5",
+      "Degree 4, leading coefficient 2"
+    ],
+    correctIndex: 0,
+    explanation: "The degree is the highest exponent present (4), and the leading coefficient is the coefficient of that highest-degree term, which is 3."
+  },
+  {
+    question: "Subtract: (3x^2 - 2x + 5) - (x^2 + 4x - 1)",
+    choices: [
+      "2x^2 - 6x + 6",
+      "2x^2 + 2x + 4",
+      "4x^2 - 6x + 4",
+      "2x^2 - 6x + 4"
+    ],
+    correctIndex: 0,
+    explanation: "Distribute the negative sign across every term of the second polynomial first: 3x^2 - 2x + 5 - x^2 - 4x + 1 = 2x^2 - 6x + 6. Choice B forgets to distribute the negative sign to all terms."
+  },
+  {
+    question: "Multiply: (x - 2)(x^2 + 3x - 1)",
+    choices: [
+      "x^3 + x^2 - 7x + 2",
+      "x^3 + 5x^2 - 7x + 2",
+      "x^3 + x^2 - x + 2",
+      "x^3 - x^2 - 7x + 2"
+    ],
+    correctIndex: 0,
+    explanation: "Distributing gives x^3 + 3x^2 - x - 2x^2 - 6x + 2, and combining like terms yields x^3 + x^2 - 7x + 2."
+  },
+  {
+    question: "A student is asked to factor 2x^2 + 8x completely. What is the fully correct factorization?",
+    choices: [
+      "2x(x + 4)",
+      "The expression cannot be factored further",
+      "x(2x + 8)",
+      "2(x^2 + 4x)"
+    ],
+    correctIndex: 0,
+    explanation: "Always pull out the GCF first: the GCF of 2x^2 and 8x is 2x, giving 2x(x + 4). The notes call out skipping the GCF step as the most common trap on this type of problem."
+  },
+  {
+    question: "Factor completely: x^3 + 4x^2 + 3x",
+    choices: [
+      "x(x + 1)(x + 3)",
+      "x(x^2 + 4x + 3)",
+      "(x + 1)(x + 3)",
+      "x(x + 3)(x - 1)"
+    ],
+    correctIndex: 0,
+    explanation: "First pull out the GCF x to get x(x^2 + 4x + 3), then factor the trinomial (numbers 1 and 3 multiply to 3 and add to 4): x(x + 1)(x + 3). Stopping at x(x^2 + 4x + 3) is the 'stopped one layer too early' trap described in the notes."
+  },
+  {
+    question: "Divide 2x^3 - 3x^2 - 8x + 3 by (x - 3) using synthetic division. What is the remainder?",
+    choices: [
+      "6",
+      "0",
+      "-6",
+      "3"
+    ],
+    correctIndex: 0,
+    explanation: "Synthetic division with c = 3 on coefficients 2, -3, -8, 3 gives quotient 2x^2 + 3x + 1 with remainder 6, which also matches P(3) by the Remainder Theorem."
+  },
+  {
+    question: "Using the Factor Theorem, is (x - 3) a factor of P(x) = x^3 - 4x^2 + x + 6?",
+    choices: [
+      "Yes, because P(3) = 0",
+      "No, because P(3) = 4",
+      "Yes, because P(3) = 4",
+      "No, because P(3) = 0"
+    ],
+    correctIndex: 0,
+    explanation: "P(3) = 27 - 36 + 3 + 6 = 0, so by the Factor Theorem (x - 3) is a factor since a linear factor (x - c) divides P(x) exactly when P(c) = 0."
+  },
+  {
+    question: "According to the Rational Root Theorem, which of these is NOT a possible rational root of 2x^3 - 3x^2 - 11x + 6 = 0?",
+    choices: [
+      "4",
+      "3",
+      "1/2",
+      "-6"
+    ],
+    correctIndex: 0,
+    explanation: "Possible rational roots are ± (factors of the constant, 6) / (factors of the leading coefficient, 2): ±1, ±2, ±3, ±6, ±1/2, ±3/2. Since 4 is not a factor of 6, it cannot appear in the list."
+  },
+  {
+    question: "For f(x) = (x - 1)^2(x + 3), what happens at the root x = 1, and what is the end behavior of f?",
+    choices: [
+      "The graph touches (bounces off) the x-axis at x = 1; falls left, rises right",
+      "The graph crosses the x-axis at x = 1; falls left, rises right",
+      "The graph touches the x-axis at x = 1; rises left, falls right",
+      "The graph crosses the x-axis at x = 1; rises left and right"
+    ],
+    correctIndex: 0,
+    explanation: "x = 1 has multiplicity 2 (even), so the graph touches and turns back rather than crossing. The polynomial is degree 3 (odd) with a positive leading coefficient, so it falls on the left and rises on the right."
+  },
+  {
+    question: "A polynomial has zeros at x = -2 and x = 3, and its graph passes through (0, -12). What is P(x)?",
+    choices: [
+      "P(x) = 2(x + 2)(x - 3)",
+      "P(x) = (x + 2)(x - 3)",
+      "P(x) = 2(x - 2)(x + 3)",
+      "P(x) = -2(x + 2)(x - 3)"
+    ],
+    correctIndex: 0,
+    explanation: "Writing P(x) = a(x + 2)(x - 3) and using (0, -12) gives a(2)(-3) = -12, so a = 2, giving P(x) = 2(x + 2)(x - 3). Just writing (x + 2)(x - 3) and stopping (choice B) ignores the needed leading coefficient and only matches the point (0, -6), not (0, -12)."
+  }
+];
+</script>
+<script src="quiz.js"></script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Statistical Inferences Quiz — Algebra II</title>
+<link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+<div class="quiz-container">
+  <a class="quiz-back" href="../statistical-inferences.md">&larr; Back to notes</a>
+  <h1 id="quiz-title"></h1>
+  <div id="quiz-root"></div>
+</div>
+<script>
+window.QUIZ_TITLE = "Statistical Inferences Quiz";
+window.QUIZ_DATA = [
+  {
+    question: "A school has 1,200 students. A researcher surveys 60 randomly chosen students and calculates that their average study time is 4.2 hours per week. What is '4.2 hours' an example of?",
+    choices: [
+      "A parameter, because it describes the population",
+      "A statistic, because it describes the sample",
+      "A parameter, because it was calculated from real data",
+      "A statistic, because it is unknown"
+    ],
+    correctIndex: 1,
+    explanation: "The 60 surveyed students are a sample, not the full population of 1,200, so the number describing them (4.2 hours) is a statistic, used to estimate the unknown population parameter."
+  },
+  {
+    question: "Find the median of this data set: 9, 3, 12, 5, 7",
+    choices: [
+      "12, the middle value as listed",
+      "7, the middle value after sorting: 3, 5, 7, 9, 12",
+      "5, the average of the two middle listed values",
+      "7.2, the mean of the data set"
+    ],
+    correctIndex: 1,
+    explanation: "You must sort the data first: 3, 5, 7, 9, 12. The middle value is 7. Choice A is the classic trap of taking the 'middle' position from the unsorted list."
+  },
+  {
+    question: "A set of 7 employee salaries is clustered between $40k-$50k, except for one executive salary of $250k. Which measure of center best represents a 'typical' salary, and why?",
+    choices: [
+      "The mean, because it uses every value in the data set",
+      "The median, because it is not pulled toward the $250k outlier",
+      "The mode, because it always exists in a real data set",
+      "The mean, because outliers should count more heavily"
+    ],
+    correctIndex: 1,
+    explanation: "The $250k salary is an extreme outlier that would drag the mean far above what a typical employee earns. The median stays near the clustered $40k-$50k values, so it better represents a 'typical' salary."
+  },
+  {
+    question: "Data set: 2, 4, 4, 4, 5, 5, 7, 9 has a mean of 5. What is the standard deviation?",
+    choices: [
+      "4, the variance of the data set",
+      "2, the square root of the variance (32/8 = 4)",
+      "5.66, the square root of the sum of squared deviations",
+      "32, the sum of the squared deviations"
+    ],
+    correctIndex: 1,
+    explanation: "Squared deviations from the mean (5) are 9, 1, 1, 1, 0, 0, 4, 16, summing to 32. Variance = 32/8 = 4, and standard deviation is the square root of variance, sqrt(4) = 2."
+  },
+  {
+    question: "Adult heights are normally distributed with a mean of 66 inches and a standard deviation of 3 inches. Using the empirical (68-95-99.7) rule, about what range of heights includes 95% of adults?",
+    choices: [
+      "63 to 69 inches (mean plus or minus 1 standard deviation)",
+      "60 to 72 inches (mean plus or minus 2 standard deviations)",
+      "57 to 75 inches (mean plus or minus 3 standard deviations)",
+      "66 to 72 inches (mean plus 0 to 2 standard deviations)"
+    ],
+    correctIndex: 1,
+    explanation: "The empirical rule says 95% of normally distributed data falls within mean plus or minus 2 standard deviations: 66 - 2(3) = 60 and 66 + 2(3) = 72, so 60 to 72 inches."
+  },
+  {
+    question: "Using that same height distribution (mean = 66 inches, standard deviation = 3 inches), what is the z-score for a person who is 72 inches tall, and what does it mean?",
+    choices: [
+      "z = 2; the person is 2 standard deviations above the mean",
+      "z = 6; the person is 6 inches above the mean",
+      "z = -2; the person is 2 standard deviations below the mean",
+      "z = 0.5; the person is at the 50th percentile"
+    ],
+    correctIndex: 0,
+    explanation: "z = (x - mean) / standard deviation = (72 - 66) / 3 = 6/3 = 2. This means the person's height is 2 standard deviations above the mean, not 6 inches (that's the raw difference before dividing by the standard deviation)."
+  },
+  {
+    question: "A researcher randomly selects 6 entire classrooms out of a large school and surveys every single student within those 6 classrooms. Which sampling method is this?",
+    choices: [
+      "Simple random sample, since classrooms were chosen randomly",
+      "Stratified sample, since classrooms act as subgroups",
+      "Cluster sample, since whole naturally occurring groups were selected and fully surveyed",
+      "Systematic sample, since every classroom was selected in order"
+    ],
+    correctIndex: 2,
+    explanation: "Cluster sampling selects a few whole naturally occurring groups (here, classrooms) at random and surveys everyone within each selected group. A stratified sample would instead take a partial random sample from every subgroup, not survey entire subgroups."
+  },
+  {
+    question: "A survey of 300 voters finds that 52% support a proposal, with a reported margin of error of 5%. If the sample size were instead increased to 3,000 voters (with the same underlying support level), what would you expect to happen to the margin of error?",
+    choices: [
+      "It would increase, since more voters means more possible disagreement",
+      "It would decrease, since a larger sample reduces random sample-to-sample fluctuation",
+      "It would stay exactly the same, since margin of error doesn't depend on sample size",
+      "It would become exactly 0%, since the sample is now large enough to be perfectly accurate"
+    ],
+    correctIndex: 1,
+    explanation: "A larger sample size shrinks the margin of error because more data means less random fluctuation between different possible samples. It does not go to exactly zero, since some uncertainty always remains with a sample smaller than the full population."
+  },
+  {
+    question: "Class A has 15 students and averages 70 on a test. Class B has 25 students and averages 90. What is the average score of all 40 students combined?",
+    choices: [
+      "80, the plain average of 70 and 90",
+      "82.5, the size-weighted average: (15(70) + 25(90)) / 40",
+      "85, the midpoint rounded up",
+      "160, the sum of the two class averages"
+    ],
+    correctIndex: 1,
+    explanation: "Since the classes have different sizes, you must weight by group size: (15*70 + 25*90)/40 = (1050 + 2250)/40 = 3300/40 = 82.5. Simply averaging 70 and 90 to get 80 ignores that Class B has more students pulling the true average higher."
+  },
+  {
+    question: "A teacher wants a sample representative of each grade level, so she randomly selects 8 students from each of grades 9, 10, 11, and 12 separately. Which sampling method is this, and why is it useful here?",
+    choices: [
+      "Cluster sample, because whole grades were treated as groups",
+      "Systematic sample, because students were picked in a set pattern",
+      "Stratified sample, because the population was split into subgroups (grades) and randomly sampled from each",
+      "Simple random sample, because every selected student was chosen randomly"
+    ],
+    correctIndex: 2,
+    explanation: "Stratified sampling splits the population into subgroups (strata) sharing a trait -- here, grade level -- and then takes a random sample from each subgroup separately, ensuring every grade is represented rather than leaving it to chance."
+  }
+];
+</script>
+<script src="quiz.js"></script>
+</body>
+</html>

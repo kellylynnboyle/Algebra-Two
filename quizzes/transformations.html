@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Transformations of Functions Quiz — Algebra II</title>
+<link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+<div class="quiz-container">
+  <a class="quiz-back" href="../transformations.md">&larr; Back to notes</a>
+  <h1 id="quiz-title"></h1>
+  <div id="quiz-root"></div>
+</div>
+<script>
+window.QUIZ_TITLE = "Transformations of Functions Quiz";
+window.QUIZ_DATA = [
+  {
+    question: "What parent function and transformation describes g(x) = |x| - 4?",
+    choices: [
+      "Quadratic parent function shifted down 4",
+      "Absolute value parent function shifted up 4",
+      "Absolute value parent function shifted down 4",
+      "Absolute value parent function shifted left 4"
+    ],
+    correctIndex: 2,
+    explanation: "|x| - 4 is the absolute value parent function with k = -4 outside the function, which shifts the graph down 4 units. The shift is vertical, not horizontal, and the parent shape is absolute value, not quadratic."
+  },
+  {
+    question: "Describe the transformation applied to f(x) = x^3 to get g(x) = (x + 6)^3.",
+    choices: [
+      "Shifted right 6",
+      "Shifted left 6",
+      "Shifted up 6",
+      "Shifted down 6"
+    ],
+    correctIndex: 1,
+    explanation: "(x + 6)^3 = (x - (-6))^3, so h = -6, which shifts the graph left 6. Choice A applies the backwards 'sign matches direction' intuition that works for vertical shifts but not horizontal ones."
+  },
+  {
+    question: "How does the graph of g(x) = (1/4)|x| compare to the parent function f(x) = |x|?",
+    choices: [
+      "Vertically compressed by a factor of 1/4",
+      "Vertically stretched by a factor of 4",
+      "Horizontally compressed by a factor of 1/4",
+      "Horizontally stretched by a factor of 4"
+    ],
+    correctIndex: 0,
+    explanation: "The 1/4 multiplies the outside of the function (a = 1/4), which scales y-values by 1/4 — a vertical compression since 0 < |a| < 1. Choices C and D mistakenly treat this as a horizontal (inside-the-function) change."
+  },
+  {
+    question: "One of the most commonly missed transformation questions on the SAT/ACT involves horizontal scaling because it works opposite to vertical scaling. Given f(x) = x^2, how does the graph of g(x) = f(4x) compare to f(x)?",
+    choices: [
+      "Compressed horizontally by a factor of 1/4",
+      "Stretched horizontally by a factor of 4",
+      "Compressed horizontally by a factor of 4",
+      "Stretched horizontally by a factor of 1/4"
+    ],
+    correctIndex: 0,
+    explanation: "In f(bx), b = 4 > 1 means the graph is compressed toward the y-axis by a factor of 1/b = 1/4. Choice B is the classic trap: assuming b > 1 stretches the graph the way a > 1 does for vertical scaling, but the inside-the-function rule runs backwards from the outside-the-function rule."
+  },
+  {
+    question: "The graph of f(x) is reflected over the x-axis only (its shape and position are otherwise unchanged). Which equation represents the new graph g(x)?",
+    choices: [
+      "g(x) = f(-x)",
+      "g(x) = -f(-x)",
+      "g(x) = -f(x)",
+      "g(x) = |f(x)|"
+    ],
+    correctIndex: 2,
+    explanation: "Negating the output, -f(x), flips y-values and reflects over the x-axis. Choice A, f(-x), negates the input instead and reflects over the y-axis — the classic mix-up between the two reflection rules. Choice B reflects over both axes, and choice D isn't a reflection at all."
+  },
+  {
+    question: "The point (3, 7) lies on the graph of f(x). Given g(x) = f(x - 2) + 5, which point lies on the graph of g(x)?",
+    choices: [
+      "(5, 12)",
+      "(1, 12)",
+      "(5, 2)",
+      "(1, 2)"
+    ],
+    correctIndex: 0,
+    explanation: "f(x - 2) shifts every point right 2 (3 -> 5), and + 5 shifts up 5 (7 -> 12), giving (5, 12). Choice B shifts left instead of right (the horizontal-direction trap); choice C gets the x-coordinate right but shifts the y-coordinate down instead of up."
+  },
+  {
+    question: "The point (4, -2) lies on the graph of f(x). Given g(x) = -3f(x), which point lies on the graph of g(x)?",
+    choices: [
+      "(4, 6)",
+      "(-12, -2)",
+      "(4, -6)",
+      "(-4, 6)"
+    ],
+    correctIndex: 0,
+    explanation: "The -3 multiplies the outside of the function, so it only affects the y-coordinate: -2 x -3 = 6, giving (4, 6); the x-coordinate never changes for a vertical transformation. Choice B mistakenly applies the -3 to the x-coordinate instead, and choice C applies the stretch by 3 but forgets the negative sign's reflection."
+  },
+  {
+    question: "Write the equation for f(x) = x^2 reflected over the x-axis, shifted left 3, and shifted up 7.",
+    choices: [
+      "g(x) = -(x + 3)^2 + 7",
+      "g(x) = -(x - 3)^2 + 7",
+      "g(x) = (x + 3)^2 + 7",
+      "g(x) = -(x + 3)^2 - 7"
+    ],
+    correctIndex: 0,
+    explanation: "Reflecting over the x-axis makes a = -1, left 3 means h = -3 so the inside becomes (x + 3), and up 7 means k = 7: g(x) = -(x + 3)^2 + 7. Choice B shifts right instead of left, choice C forgets the x-axis reflection, and choice D shifts down instead of up."
+  },
+  {
+    question: "For a general transformation g(x) = a * f(b(x - h)) + k, when tracking how a single point on f(x) moves to the corresponding point on g(x), in which order should the transformations be applied?",
+    choices: [
+      "b, then h, then a, then k",
+      "h, then b, then a, then k",
+      "a, then k, then b, then h",
+      "k, then a, then h, then b"
+    ],
+    correctIndex: 0,
+    explanation: "Because of how function notation nests, the inside-the-function changes apply first — the horizontal stretch/compression/reflection (b), then the horizontal shift (h) — followed by the outside-the-function changes: the vertical stretch/compression/reflection (a), then the vertical shift (k) last."
+  },
+  {
+    question: "f(x) has domain [-5, 1] and range [-4, 6]. What are the domain and range of g(x) = 3f(x + 2) - 1?",
+    choices: [
+      "Domain [-7, -1], range [-13, 17]",
+      "Domain [-13, 17], range [-7, -1]",
+      "Domain [-5, 1], range [-13, 17]",
+      "Domain [-7, -1], range [-5, 5]"
+    ],
+    correctIndex: 0,
+    explanation: "Horizontal changes (b, h) only ever affect the domain, and vertical changes (a, k) only ever affect the range — a common SAT/ACT trap is swapping the two, as in choice B. Domain: h = -2 shifts [-5, 1] left 2 to [-7, -1]. Range: scale [-4, 6] by a = 3 to get [-12, 18], then shift by k = -1 to get [-13, 17]; choice D applies only the shift and forgets to scale by a first."
+  }
+];
+</script>
+<script src="quiz.js"></script>
+</body>
+</html>

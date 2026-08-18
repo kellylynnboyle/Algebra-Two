@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trigonometric Functions Quiz — Algebra II</title>
+<link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+<div class="quiz-container">
+  <a class="quiz-back" href="../trigonometric-functions.md">&larr; Back to notes</a>
+  <h1 id="quiz-title"></h1>
+  <div id="quiz-root"></div>
+</div>
+<script>
+window.QUIZ_TITLE = "Trigonometric Functions Quiz";
+window.QUIZ_DATA = [
+  {
+    question: "Convert 150 degrees to radians.",
+    choices: [
+      "5pi/6",
+      "5pi/3",
+      "pi/3",
+      "3pi/4"
+    ],
+    correctIndex: 0,
+    explanation: "Multiply by pi/180: 150 * (pi/180) = 5pi/6. Choice B doubles the result, and choice C/D come from misreducing the fraction."
+  },
+  {
+    question: "Convert 7pi/4 radians to degrees.",
+    choices: [
+      "315 degrees",
+      "280 degrees",
+      "630 degrees",
+      "175 degrees"
+    ],
+    correctIndex: 0,
+    explanation: "Multiply by 180/pi: 7pi/4 * (180/pi) = 7 * 45 = 315 degrees. Choice C forgets to divide by the denominator 4 (using 180 instead of 45 per unit)."
+  },
+  {
+    question: "What is the coordinate pair (cos theta, sin theta) for theta = 300 degrees on the unit circle?",
+    choices: [
+      "(1/2, -sqrt(3)/2)",
+      "(-sqrt(3)/2, -1/2)",
+      "(-1/2, sqrt(3)/2)",
+      "(sqrt(3)/2, 1/2)"
+    ],
+    correctIndex: 0,
+    explanation: "300 degrees is in Quadrant IV, reference angle 60 degrees, where cosine is positive and sine is negative: (cos 300, sin 300) = (1/2, -sqrt(3)/2). Choice B reverses the coordinate order (the sin/cos swap trap), and choice D is the Quadrant I reference pair with no sign adjustment."
+  },
+  {
+    question: "A right triangle has legs 3 and 4 and hypotenuse 5, with angle theta opposite the side of length 3. What is tan(theta)?",
+    choices: [
+      "3/4",
+      "4/3",
+      "3/5",
+      "4/5"
+    ],
+    correctIndex: 0,
+    explanation: "TOA: tan(theta) = opposite/adjacent = 3/4. Choice B flips opposite and adjacent (that would be cot), and choices C and D are sin(theta) and cos(theta) respectively."
+  },
+  {
+    question: "At theta = 60 degrees, (x, y) = (1/2, sqrt(3)/2) on the unit circle. What is sec(60 degrees)?",
+    choices: [
+      "2",
+      "sqrt(3)",
+      "2sqrt(3)/3",
+      "1/2"
+    ],
+    correctIndex: 0,
+    explanation: "sec(theta) = 1/x = 1/(1/2) = 2, since sec is the reciprocal of cosine, not sine. Choice B is tan(60), choice C is csc(60), and choice D is cos(60) itself (forgetting to take the reciprocal)."
+  },
+  {
+    question: "Given sin(theta) = 3/5 and theta is in Quadrant II, find cos(theta) using the Pythagorean identity.",
+    choices: [
+      "-4/5",
+      "4/5",
+      "-16/25",
+      "3/4"
+    ],
+    correctIndex: 0,
+    explanation: "cos^2(theta) = 1 - sin^2(theta) = 1 - 9/25 = 16/25, so cos(theta) = plus-or-minus 4/5; Quadrant II means cosine is negative, giving -4/5. Choice B picks the correct magnitude but forgets the Quadrant II sign, and choice C forgets to take the square root."
+  },
+  {
+    question: "Find the reference angle for theta = 210 degrees and use it to determine the sign of sin(210 degrees).",
+    choices: [
+      "Reference angle 30 degrees; sin(210 degrees) is negative",
+      "Reference angle 30 degrees; sin(210 degrees) is positive",
+      "Reference angle 210 degrees; sin(210 degrees) is negative",
+      "Reference angle 60 degrees; sin(210 degrees) is negative"
+    ],
+    correctIndex: 0,
+    explanation: "210 degrees is in Quadrant III, so the reference angle is 210 - 180 = 30 degrees, and by ASTC only tangent (and cotangent) is positive in Quadrant III, so sine is negative: sin(210 degrees) = -1/2. Choice B is the classic error of finding the correct magnitude but dropping the sign."
+  },
+  {
+    question: "A curve is given by y = 3*sin(2(x - pi/4)) + 1. What are its amplitude and period?",
+    choices: [
+      "Amplitude 3, period pi",
+      "Amplitude 3, period 2pi",
+      "Amplitude 1, period pi",
+      "Amplitude 2, period pi/4"
+    ],
+    correctIndex: 0,
+    explanation: "Amplitude is |a| = 3, and period = 2pi/|b| = 2pi/2 = pi. Choice B uses the parent period 2pi instead of dividing by b, and choice C mistakes the vertical shift k = 1 for the amplitude."
+  },
+  {
+    question: "In triangle ABC, a = 7, b = 9, and the included angle C = 40 degrees. Which equation correctly starts the solution for side c?",
+    choices: [
+      "c^2 = 7^2 + 9^2 - 2(7)(9)cos(40 degrees)",
+      "c/sin C = a/sin A",
+      "c = 7*sin(40 degrees)",
+      "c^2 = 7^2 + 9^2 + 2(7)(9)sin(40 degrees)"
+    ],
+    correctIndex: 0,
+    explanation: "This is SAS (two sides and the included angle, no angle-side pair), so the Law of Cosines applies. Choice B is the Law of Sines, the classic wrong-Law pick when there's no matched angle-side pair, and choice D has both the sign and the function wrong (should be minus and cosine, not plus and sine)."
+  },
+  {
+    question: "The terminal side of theta passes through the point (-8, 15). What is tan(theta)?",
+    choices: [
+      "-15/8",
+      "15/8",
+      "-8/15",
+      "-15/17"
+    ],
+    correctIndex: 0,
+    explanation: "tan(theta) = y/x = 15/(-8) = -15/8; note r = sqrt((-8)^2 + 15^2) = 17 is needed for sin and cos but tan doesn't require r at all. Choice C flips x and y (that would be cot), and choice D incorrectly divides by r instead of x."
+  }
+];
+</script>
+<script src="quiz.js"></script>
+</body>
+</html>
