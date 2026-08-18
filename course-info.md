@@ -4,7 +4,7 @@ Source: syllabus PDF provided by the student (Mrs. Samir / Mr. Schacter, Room 41
 
 ## Course Outline (subject to change)
 
-1. **Sequence and Functions** ← current unit (see [sequences-and-series.md](sequences-and-series.md))
+1. **Sequence and Functions** ← current unit (see [sequences-and-series.md](sequences-and-series.md) and [functions.md](functions.md))
 2. Polynomials
 3. Complex Numbers and Rational Exponents
 4. Exponential Functions and Equations
