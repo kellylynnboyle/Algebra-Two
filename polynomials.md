@@ -295,3 +295,46 @@ all real, complex roots always come in **conjugate pairs** (`a + bi` and `a - bi
    falls left, rises right.
 
 </details>
+
+## 12. Most Frequently Missed on SAT/ACT
+
+Polynomial questions on the ACT cluster into three types — factoring/FOILing, graphing
+polynomial functions, and polynomial operations — with factoring the most common and
+usually medium difficulty. Most missed points come from a handful of repeat traps:
+
+- **Skipping the GCF first.** Jumping straight to trinomial or difference-of-squares
+  patterns before pulling out a common factor. `2x^2 + 8x` is not "unfactorable" — factor
+  out `2x` first to get `2x(x + 4)`.
+- **Factor-pair slip-ups.** For `x^2 + bx + c`, the two numbers must satisfy *both*
+  conditions (multiply to `c` **and** add to `b`), not just one. Under time pressure it's
+  easy to grab a pair that only satisfies one and move on.
+- **Stopping one layer too early.** `x^3 + 4x^2 + 3x` factors first to `x(x^2 + 4x + 3)`,
+  but the trinomial factors further to `x(x + 1)(x + 3)`. After any factoring step, ask
+  "can this piece factor more?"
+- **Sign errors.** Losing track of a negative sign while factoring or FOILing is probably
+  the single biggest source of wrong answers here — test-writers often build a wrong
+  answer choice that's exactly what you'd get from the sign slip.
+- **Not using every given root/point.** Given roots `-5` and `1`, it's tempting to write
+  `P(x) = (x + 5)(x - 1)` and stop — but a leading coefficient `a` (or an extra root) may
+  be needed to match another given point on the graph.
+- Long/synthetic division isn't reliably tested directly (accounts vary), but the
+  **Remainder Theorem** — evaluating `P(c)` to get the remainder of `P(x) ÷ (x - c)` —
+  does show up, so treat synthetic division itself as an Algebra II skill more than a
+  guaranteed test topic.
+
+### Practice
+
+1. Factor completely: `3x^3 + 12x^2 + 9x`
+2. A polynomial has zeros at `x = -2` and `x = 3`, and the graph passes through
+   `(0, -12)`. Find `P(x)`.
+
+<details>
+<summary>Answers</summary>
+
+1. GCF first: `3x(x^2 + 4x + 3)`, then factor the trinomial: `3x(x + 1)(x + 3)`. Stopping
+   at `3x(x^2 + 4x + 3)` is the "didn't factor completely" trap.
+2. `P(x) = a(x + 2)(x - 3)`. Using `(0, -12)`: `a(2)(-3) = -12 → -6a = -12 → a = 2`. So
+   `P(x) = 2(x + 2)(x - 3) = 2x^2 - 2x - 12`. Writing `P(x) = (x + 2)(x - 3)` and stopping
+   is the "forgot the leading coefficient" trap — it gives `(0, -6)`, not `(0, -12)`.
+
+</details>

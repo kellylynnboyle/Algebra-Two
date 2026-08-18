@@ -252,3 +252,56 @@ ladder is the hypotenuse, so `sin(65°) = h/20` → `h = 20*sin(65°) ≈ 20(0.9
 8. `sin(50°) = h/100` → `h = 100*sin(50°) ≈ 100(0.766) ≈ 76.6` ft
 
 </details>
+
+## 11. Most Frequently Missed on SAT/ACT
+
+Trig is a small slice of both tests — on the ACT it's roughly 3-4 of the 45 questions
+(~7%), clustered in the harder second half and almost always plain SOH-CAH-TOA (the ACT
+will have you set up a ratio like `cos x = 4/5` but never make you evaluate an inverse
+trig function for an actual angle). On the SAT it lives inside "Additional Topics in Math"
+(~10% of the section, shared with geometry and complex numbers) and does pull in unit
+circle / radian ideas. Even so, these are the mistakes that account for most of the
+missed points:
+
+- **Flipping the unit-circle coordinate order.** A point on the unit circle is
+  `(cos θ, sin θ)` — x-coordinate first. It's easy to write it backwards as
+  `(sin θ, cos θ)`, especially under time pressure.
+- **Dropping the sign when using a reference angle.** The reference angle gives the
+  correct magnitude, not the correct sign — students find `sin(30°) = 1/2` and forget
+  that in Quadrant III sine is negative, so `sin(210°) = -1/2`, not `1/2`. Recheck with
+  ASTC every time.
+- **Wrong calculator mode.** Radian mode on a degree problem (or vice versa) gives a
+  number that looks plausible but is completely wrong — there's no error message, so the
+  mistake often isn't caught. Check the mode before evaluating anything.
+- **Picking the wrong Law.** Law of Sines (`a/sin A = b/sin B = c/sin C`) needs a matched
+  angle-side pair; Law of Cosines (`c^2 = a^2 + b^2 - 2ab*cos C`) is for SAS/SSS triangles
+  with no such pair. Grabbing Law of Sines when you only have SAS leaves an equation with
+  two unknowns and no way to solve it.
+- **Reaching for inverse trig on the ACT.** ACT trig questions stop at a simplified ratio
+  — they never ask you to solve for the angle itself. Trying to compute `arcsin`/`arccos`/
+  `arctan` anyway burns time on a step the question never asked for.
+
+### Practice
+
+1. A point on the unit circle corresponds to `θ = 300°`. Which of the following is the
+   point's coordinate pair?
+   `(A) (-1/2, √3/2)`  `(B) (1/2, -√3/2)`  `(C) (-√3/2, -1/2)`  `(D) (√3/2, 1/2)`
+2. In triangle `ABC`, `a = 7`, `b = 9`, and the included angle `C = 40°`. Which equation
+   correctly starts the solution for side `c`?
+   `(A) c/sin C = a/sin A`  `(B) c^2 = 7^2 + 9^2 - 2(7)(9)cos(40°)`
+   `(C) c = 7*sin(40°)`  `(D) c^2 = 7^2 + 9^2 + 2(7)(9)sin(40°)`
+
+<details>
+<summary>Answers</summary>
+
+1. **(B)**. Reference angle `60°` in Quadrant IV: cosine positive, sine negative, so
+   `(cos 300°, sin 300°) = (1/2, -√3/2)`. `(A)` swaps the sign pattern for Quadrant II,
+   `(C)` reverses the coordinate order (the `(sin θ, cos θ)` trap), `(D)` is the
+   Quadrant I reference pair with no sign adjustment at all.
+2. **(B)**. This is SAS — two sides and the included angle, no angle-side pair — so Law
+   of Cosines applies. `(A)` is the Law of Sines setup, the classic wrong-Law choice when
+   no angle-side pair exists. `(C)` treats the triangle as if it were a right triangle
+   with SOH-CAH-TOA, which doesn't apply here. `(D)` uses the Law of Cosines formula with
+   the sign and function both wrong (`+` instead of `-`, `sin` instead of `cos`).
+
+</details>

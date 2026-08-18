@@ -229,3 +229,60 @@ e.g. reflecting `f(x) = √x` (domain `x ≥ 0`) over the y-axis gives domain `x
    right 1 (`h`), then vertical stretch by 2 (`a`), then shift up 5 (`k`).
 
 </details>
+
+## 12. Most Frequently Missed on SAT/ACT
+
+Test-prep sources (NovaMath, College Panda, PrepScholar, Blitzsat, Achievable) all flag
+transformations as a classic "hard question" category — the test hands you a graph of `f(x)`
+and asks about something like `g(x) = f(x - 3) + 2` without ever giving you `f(x)`'s
+equation, so you have to reason about the shift geometrically. The same handful of traps
+account for most of the wrong answers:
+
+- **Horizontal shift direction.** `f(x - h)` moves the graph **right**, `f(x + h)` moves it
+  **left** — backwards from what the sign suggests. This trips people up more because
+  vertical shifts *do* match intuition (`f(x) + k` up, `f(x) - k` down), so students apply
+  the same "sign matches direction" logic to the horizontal case and get it backwards.
+- **Reflection mix-up.** `-f(x)` (negate the output) flips over the **x-axis**; `f(-x)`
+  (negate the input) flips over the **y-axis**. It's easy to assume both do the same thing,
+  or to swap which axis goes with which.
+- **Horizontal stretch/compression runs backwards too.** In `f(bx)`, `b > 1` **compresses**
+  toward the y-axis and `0 < b < 1` **stretches** away from it — the opposite of vertical
+  scaling (`a · f(x)`), where `a > 1` stretches and `0 < a < 1` compresses. Mixing up the
+  "inside" (backwards) rule with the "outside" (as-expected) rule is one of the most common
+  errors on this topic.
+- **Applying combined transformations in the wrong order.** For `g(x) = a·f(b(x - h)) + k`,
+  trying to picture the whole graph moving at once invites order mistakes. Safer: track one
+  known point at a time, applying `b` and `h` first (inside the function), then `a`, then `k`
+  last — same order as Section 7.
+- **Forgetting domain/range move too.** A horizontal shift moves the *domain*; a vertical
+  stretch/shift moves the *range* — not the other way around. E.g. if `f` has domain `[-3,5]`
+  and range `[0,8]`, then `g(x) = 2f(x - 1) + 3` has domain `[-2,6]` (shifted by `h = 1`) and
+  range `[3,19]` (scaled by `2`, then shifted by `3`) — students often update only one, or
+  apply the vertical rule to the domain.
+
+### Practice Problems
+
+1. The graph of `f(x)` has a key point at `(2, 5)`. Which point is on the graph of
+   `g(x) = f(x + 3) - 1`?
+   - (A) `(5, 4)`
+   - (B) `(-1, 4)`
+   - (C) `(5, 6)`
+   - (D) `(-1, 6)`
+2. `f(x)` has domain `[-4, 6]` and range `[-2, 10]`. What are the domain and range of
+   `g(x) = -3f(x - 2) + 1`?
+
+<details>
+<summary>Answers</summary>
+
+1. **(B) `(-1, 4)`**. `h = -3` (since `x + 3 = x - (-3)`) shifts left 3: `2 + (-3) = -1`.
+   `k = -1` shifts down 1: `5 - 1 = 4`. Choice (A) shifts right instead of left (the
+   horizontal-direction trap). Choice (C) shifts up instead of down. Choice (D) gets the
+   x-coordinate right but keeps the y-coordinate's sign wrong (up instead of down) — pairing
+   the correct shift with a vertical-direction slip.
+2. Domain `[-2, 8]`, range `[-29, 7]`. Domain shifts by `h = 2`: `[-4+2, 6+2] = [-2, 8]`.
+   Range: apply `a = -3` to each endpoint (`-2 → 6`, `10 → -30`, and the interval flips since
+   `a < 0`, giving `[-30, 6]`), then apply `k = 1` (`-30 → -29`, `6 → 7`), giving `[-29, 7]`.
+   A common wrong answer applies the `a = -3` scaling to the *domain* instead of the range
+   (the domain/range mix-up trap), or forgets that `a < 0` flips the interval's endpoints.
+
+</details>

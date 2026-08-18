@@ -266,3 +266,49 @@ uncertainty" is the key takeaway.)
    would contain the true population percentage in favor.
 
 </details>
+
+## 10. Most Frequently Missed on SAT/ACT
+
+Both tests draw on this unit (the SAT works in a handful of stats questions per test, mostly
+calculator-allowed; the ACT's Statistics & Probability category is roughly 10% of the Math
+section), and neither ever requires computing a standard deviation by hand — just
+understanding what it means. The wrong answers on these questions are built around a small
+set of recurring traps:
+
+- **Forgetting to sort before finding the median.** Pulling the "middle" value from an
+  unsorted list gives a number that isn't the median at all — sorting first is easy to skip
+  under time pressure.
+- **Treating mean and median as interchangeable when an outlier is present.** The mean gets
+  pulled toward extreme values; the median doesn't. `60, 65, 70, 75, 200` → mean `= 94`,
+  median `= 70`. A wrong choice is often built assuming the two are close together.
+- **Assuming a wider range always means a bigger standard deviation, and assuming any
+  symmetric-looking distribution is normal.** For two similarly-sized, roughly symmetric data
+  sets, wider spread *usually* does mean greater standard deviation — but it's not guaranteed,
+  and a bimodal distribution can look symmetric without being a normal (single-peaked) one.
+- **Misreading a multi-group table, or averaging two group averages without weighting by
+  group size.** Combining a class of 10 (average `80`) with a class of 30 (average `90`) is
+  **not** `(80+90)/2 = 85` — it's the size-weighted average, `(10·80 + 30·90)/40 = 87.5`.
+- **Assuming a bigger sample shrinks precision instead of improving it.** A larger sample
+  size produces a *smaller* margin of error, not a larger one — more data means less random
+  sample-to-sample fluctuation.
+
+### Practice
+
+1. Class A (12 students) averages `78` on a quiz; Class B (28 students) averages `88`. What is
+   the average score of all 40 students combined?
+2. A data set of 7 employee salaries is mostly clustered in the $40k-50k range, except for one
+   executive salary of $250k. Which measure of center best represents a "typical" salary in
+   this set, and why?
+
+<details>
+<summary>Answers</summary>
+
+1. Weighted average: `(12·78 + 28·88)/40 = (936 + 2464)/40 = 3400/40 = 85`. A trap answer of
+   `83` (the plain, unweighted average of `78` and `88`) represents the weighting-by-group-size
+   mistake — treating two differently-sized groups as if they counted equally.
+2. **Median.** The single $250k executive salary is an outlier that would drag the mean far
+   above what any typical employee earns; a trap answer choosing the **mean** represents the
+   mean/median mix-up, assuming the mean still reflects a "typical" value even with a
+   skewing outlier present.
+
+</details>

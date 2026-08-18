@@ -254,3 +254,51 @@ Check: `2(16)^(1/2) - 3 = 2(4) - 3 = 5` ✓
    (⁴√16)^3 = 2^3 = 8` ✓
 
 </details>
+
+## 14. Most Frequently Missed on SAT/ACT
+
+Scope check first: the SAT rarely tests complex numbers directly — they're only a sliver of
+the "Additional Topics in Math" domain (about 10% of the section, shared with geometry and
+trig), while the ACT tests `i` and complex numbers more consistently under Intermediate
+Algebra. Rational exponents and radicals, by contrast, show up regularly on both tests. When
+complex numbers *do* appear, these are the traps test-prep tutors (Varsity Tutors, Kaplan,
+Effortless Math) flag most often:
+
+- **Dropping a sign when subtracting.** `(4 + 5i) - (-1 + 2i)` requires distributing the
+  minus sign across both terms, and the double-negative `-(-2i)` is where it slips —
+  students leave it as `-2i` instead of flipping it to `+2i`. Kaplan's fix: rewrite the
+  subtraction as addition of the opposite first — `(4+5i) + (1 - 2i)` — so every step is an
+  addition and there's no sign to mishandle.
+- **Forgetting to substitute `i^2 = -1` at the end.** FOILing `(1+2i)(3+4i)` correctly gives
+  `3 + 4i + 6i + 8i^2`, and combining like terms gives `3 + 10i + 8i^2` — but that's not
+  simplified. Students stop there instead of taking the last step, `8i^2 = -8`, to reach
+  `-5 + 10i`.
+- **Miscounting the cycle for high powers of `i`.** The pattern `i, -1, -i, 1` repeats every
+  4 exponents, so `i^99` should be reduced using the nearest lower multiple of 4:
+  `99 = 96 + 3`, so `i^99 = i^3 = -i`. The usual error is matching the wrong remainder to
+  the wrong value in the cycle.
+- **Dividing without multiplying by the conjugate.** Faced with `a / (c + di)`, students try
+  to simplify directly instead of multiplying top and bottom by the conjugate `c - di`
+  first — the same move that clears `i` from a denominator that rationalizing a radical
+  denominator does.
+- **Flipping the root and the power in `x^(m/n)`.** The denominator `n` is the root index and
+  the numerator `m` is the power, so `x^(2/3)` is "cube root of `x`, then squared" — not
+  "square root of `x`, then cubed." Mixing up which number does which job is an easy slip
+  going between radical and rational-exponent form.
+
+**Trap practice**
+
+1. Simplify: `(3 - 4i) - (-2 + 6i)`
+2. Evaluate: `i^74`
+
+<details>
+<summary>Answers</summary>
+
+1. `(3 - 4i) - (-2 + 6i) = (3 - 4i) + (2 - 6i) = 5 - 10i`. A wrong choice of `1 - 10i` comes
+   from the sign-error trap — mishandling the double-negative `-(-2)` on the real part (or
+   `-(+6i)`) and leaving it unflipped instead of turning it into `+2`.
+2. `74 = 72 + 2`, and `72` is the nearest lower multiple of 4, so `i^74 = i^2 = -1`. A wrong
+   choice of `i` would come from the cycle-miscount trap — mismatching remainder `2` with
+   the value for remainder `1`.
+
+</details>

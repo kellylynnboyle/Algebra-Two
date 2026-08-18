@@ -287,3 +287,54 @@ h = 10 years
 8. `A(15) = 40 * (1/2)^(15/5) = 40 * (1/2)^3 = 40 * 1/8 = 5` mg
 
 </details>
+
+## 12. Most Frequently Missed on SAT/ACT
+
+Exponential functions are a favorite test topic, and test-prep data (Achievable, Khan
+Academy SAT prep, SATsphere, TangibleLearning) points to the same handful of traps
+showing up again and again. One scope note first: the **digital SAT never requires
+logs** — its exponential growth/decay questions can always be solved by plugging in
+values or setting up a ratio algebraically. The **ACT does test logs directly**
+(evaluating them, log properties, solving log equations), so Sections 5–8 above matter
+far more for ACT-takers than SAT-takers.
+
+- **Linear vs. exponential phrasing.** The test leans hard on wording: "increases by a
+  fixed *amount* each year" means add (linear); "increases by a fixed *percentage*" or
+  "doubles/triples/halves" means multiply (exponential). Misreading this sets up the
+  wrong equation entirely — answer choices are often built as 2 linear options + 2
+  exponential options specifically to catch this.
+- **Power rule vs. product rule mix-up.** `(x^a)^b = x^(ab)`, not `x^(a+b)` — that
+  addition rule is for `x^a * x^b`. Confusing the two is one of the most common algebra
+  slips inside an otherwise correct exponential setup.
+- **Misreading `a` and `b` in `y = a*b^x`.** `a` is the initial value (y-intercept), `b`
+  is the repeated multiplier. This gets worse with percentages: "a 5% annual increase"
+  means `b = 1.05`, not `b = 0.05` or `b = 1.5`.
+- **Compounding formula confusion.** Mixing up discrete compounding
+  `A = P(1 + r/n)^(nt)` with continuous compounding `A = Pe^(rt)`, or forgetting to
+  divide `r` by `n` and multiply `t` by `n` inside the discrete formula.
+- **Over-relying on "plug into calculator."** Some multi-step exponential equations
+  genuinely require isolating a variable exponent algebraically (see Section 7).
+  Students used to grabbing a calculator for everything get stuck without a working
+  grasp of log properties — a bigger risk on the ACT, since the SAT is built so logs
+  aren't required.
+
+### Practice
+
+1. A population of bacteria increases by 20 people every hour. Which equation models the
+   population `P` after `t` hours, starting from 500?
+2. An investment of $1,000 grows at 5% annual interest, compounded quarterly. Which
+   expression gives the balance after 6 years?
+
+<details>
+<summary>Answers</summary>
+
+1. **`P = 500 + 20t`** (linear — "increases by a fixed amount" means add, not multiply).
+   Picking `P = 500(1.20)^t` would be the classic trap: treating a flat amount increase
+   as if it were a percentage increase.
+2. **`A = 1000(1 + 0.05/4)^(4*6)`**. The trap answers: `1000(1.05)^6` forgets to divide
+   the rate by `n` and multiply time by `n` (treats it like annual compounding);
+   `1000e^(0.05*6)` swaps in the continuous-compounding formula instead of the discrete
+   one the problem actually describes.
+
+</details>
+

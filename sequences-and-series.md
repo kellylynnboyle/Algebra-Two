@@ -147,3 +147,27 @@ If `|r| ≥ 1`, the series **diverges** (no finite sum).
 6. `r = 3/4`, `|r|<1` so it converges: `S = 5*(3/4) / (1 - 3/4) = 3.75/0.25 = 15`
 
 </details>
+
+## 9. Most Frequently Missed on SAT/ACT
+
+Sequence questions are a small but consistent slice of both tests, and they're missed disproportionately often relative to how few points they're worth. The ACT tests them fairly predictably (usually 1-2 questions, often placed in the harder last third of the section); the SAT (digital, Advanced Math domain) is less consistent — some students see one or two, some see none at all. Both tests keep sequences short (12 terms or fewer) so a problem is always solvable by brute force, but knowing the formulas above is much faster. One SAT-specific quirk: the finite geometric series sum formula (`S_n = a_1(1-r^n)/(1-r)`) isn't tested there — a "sum" question on the SAT is either arithmetic or a list short enough to just add by hand. The ACT will test sums of both types.
+
+**Common traps:**
+
+- **Difference vs. ratio.** Seeing a sequence like `2, 6, 18, 54` and subtracting consecutive terms out of habit instead of dividing — subtracting gives a "common difference" that isn't actually constant (`4, 12, 36`), which should be the tip-off that it's geometric, not arithmetic.
+- **Off-by-one exponent.** Writing `a_n = a_1 * r^n` instead of `a_1 * r^(n-1)`. The first term is zero multiplications by `r`, so the exponent always lags `n` by one — e.g. `a_1 = a_1 * r^0`, not `r^1`.
+- **Infinite sum without checking convergence.** Plugging straight into `S = a_1/(1-r)` without confirming `|r| < 1` first. If `|r| ≥ 1` the series diverges and has no finite sum — but the formula still spits out a number, so a careless answer looks just as "confident" as a correct one.
+- **Miscounting steps between non-consecutive terms.** Given, say, the 6th and 11th terms and asked for `d` or an earlier term, it's easy to treat them as 4 or 6 steps apart instead of the correct 5 (`11 - 6 = 5`). Always subtract the term numbers, don't just eyeball it.
+
+**Time management:** Sequence problems tend to run longer than the section average per question on both tests. If the pattern doesn't click within the first ~20-30 seconds, skip it and come back — don't let one problem eat time from easier ones later in the section.
+
+1. The 4th term of a geometric sequence is 16 and the 7th term is 128. What is the common ratio?
+2. Given `Σ (k=1 to ∞) 8 * (1.5)^k`, what is the sum of the series?
+
+<details>
+<summary>Answers</summary>
+
+1. `r`: 7th and 4th terms are 3 steps apart, so `128 = 16 * r^3` → `r^3 = 8` → `r = 2`. Answering `r = 128/16 = 8` mistakes "steps apart" (treats them as 1 step apart) for the miscounting trap above; answering `r = 128 - 16` would be the difference/ratio mix-up.
+2. The series **diverges** — `r = 1.5`, and `|r| ≥ 1`, so there is no finite sum. Plugging into `S = a_1/(1-r) = 8/(1-1.5) = -16` anyway is exactly the "forgot to check convergence" trap; it produces a clean-looking wrong answer.
+
+</details>
