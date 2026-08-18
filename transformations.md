@@ -1,5 +1,7 @@
 # Transformations of Functions — Algebra II Study Notes (Unit 5)
 
+[Take the interactive quiz →](quizzes/transformations.html)
+
 > Per the course syllabus ([course-info.md](course-info.md)), "Transformations of Function" is
 > Unit 5 of Algebra II (Mrs. Samir / Mr. Schacter, Period 5). The Schoology materials page
 > itself couldn't be reached from this environment (NMUSD login required, domain blocked by

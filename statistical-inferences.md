@@ -1,5 +1,7 @@
 # Statistical Inferences — Algebra II Study Notes (Unit 7, Tentative)
 
+[Take the interactive quiz →](quizzes/statistical-inferences.html)
+
 > Per the course syllabus ([course-info.md](course-info.md)), "Statistical Inferences" is
 > listed as Unit 7 and marked **"(Tentative)"** — it may or may not actually be reached this
 > year, depending on pacing. The Schoology materials page itself couldn't be reached from

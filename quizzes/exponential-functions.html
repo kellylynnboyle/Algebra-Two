@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exponential Functions Quiz — Algebra II</title>
+<link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+<div class="quiz-container">
+  <a class="quiz-back" href="../exponential-functions.md">&larr; Back to notes</a>
+  <h1 id="quiz-title"></h1>
+  <div id="quiz-root"></div>
+</div>
+<script>
+window.QUIZ_TITLE = "Exponential Functions Quiz";
+window.QUIZ_DATA = [
+  {
+    question: "For f(x) = 3 * 2^x, what is f(4)?",
+    choices: ["48", "24", "16", "1296"],
+    correctIndex: 0,
+    explanation: "f(4) = 3 * 2^4 = 3 * 16 = 48. 24 comes from multiplying 3*2*4 instead of exponentiating; 16 forgets the initial value a = 3; 1296 multiplies a*b first (6^4) instead of applying the exponent to b alone."
+  },
+  {
+    question: "Which of these functions represents exponential decay?",
+    choices: ["f(x) = 5 * (1.2)^x", "f(x) = 5 * (0.8)^x", "f(x) = 5 * 2^x", "f(x) = 5x + 2"],
+    correctIndex: 1,
+    explanation: "Decay requires 0 < b < 1, so f(x) = 5*(0.8)^x is decay. The other exponential options have b > 1 (growth), and 5x + 2 is linear, not exponential."
+  },
+  {
+    question: "A city's population is currently 200 and grows 5% each year. Which equation models the population P after t years?",
+    choices: ["P = 200 * (1.05)^t", "P = 200 * (0.05)^t", "P = 200 * (1.5)^t", "P = 200 + 10t"],
+    correctIndex: 0,
+    explanation: "A 5% annual increase means each year's value is 1.05 times the previous year's, so b = 1.05, not b = 0.05 (confusing the rate with the multiplier) or b = 1.5 (confusing 5% with 50%). The linear option (200 + 10t) wrongly treats the first year's 5%-of-200 gain of 10 as a fixed amount added every year."
+  },
+  {
+    question: "A membership site starts with 300 users and adds 50 new users every month (a fixed amount, not a percentage). Which equation models the number of users U after t months?",
+    choices: ["U = 300 + 50t", "U = 300 * (1.5)^t", "U = 300 * (0.5)^t", "U = 300 * (50)^t"],
+    correctIndex: 0,
+    explanation: "\"Increases by a fixed amount\" means add, so this is linear: U = 300 + 50t. The exponential options are the classic trap of treating a flat amount increase as if it were a percentage or growth-factor increase."
+  },
+  {
+    question: "Simplify (x^3)^4.",
+    choices: ["x^12", "x^7", "x^81", "x^43"],
+    correctIndex: 0,
+    explanation: "The power rule says (x^a)^b = x^(ab), so (x^3)^4 = x^12. x^7 mistakenly adds the exponents (that rule applies to x^a * x^b, not to a power of a power); x^81 mistakenly computes 3^4 as the new exponent."
+  },
+  {
+    question: "$500 is invested at 8% annual interest, compounded quarterly. What is the balance after 3 years?",
+    choices: ["$634.12", "$629.86", "$635.62", "$530.60"],
+    correctIndex: 0,
+    explanation: "A = 500(1 + 0.08/4)^(4*3) = 500(1.02)^12 ≈ $634.12. $629.86 comes from using 500(1.08)^3 (treating it as annual compounding instead of quarterly); $635.62 comes from using the continuous formula 500e^(0.08*3) instead of the discrete one; $530.60 comes from forgetting to multiply t by n, using only 500(1.02)^3."
+  },
+  {
+    question: "An investment of $2,000 compounds continuously at an annual rate of 4%. Which equation models the balance after t years?",
+    choices: ["A = 2000 * e^(0.04t)", "A = 2000 * (1.04)^t", "A = 2000 * (1 + 0.04/4)^(4t)", "A = 2000 * e^(4t)"],
+    correctIndex: 0,
+    explanation: "Continuous compounding uses A = Pe^(rt), giving 2000e^(0.04t). The second option swaps in the discrete annual-compounding formula; the third swaps in discrete quarterly compounding; the fourth drops the decimal rate and uses e^(4t) instead of e^(0.04t)."
+  },
+  {
+    question: "What is log(1000) + ln(e^5)?",
+    choices: ["8", "1005", "5", "3"],
+    correctIndex: 0,
+    explanation: "log(1000) = log base 10 of 1000 = 3 (since 10^3 = 1000), and ln(e^5) = 5, so the sum is 3 + 5 = 8. 1005 treats the log values literally instead of evaluating them; 5 and 3 each only evaluate one term and forget to add the other."
+  },
+  {
+    question: "Expand using log properties: log_5(25x^3).",
+    choices: ["2 + 3*log_5(x)", "2 + log_5(x)", "6 + 3*log_5(x)", "6*log_5(x)"],
+    correctIndex: 0,
+    explanation: "log_5(25x^3) = log_5(25) + log_5(x^3) = 2 + 3*log_5(x), using the product rule then the power rule. \"2 + log_5(x)\" drops the exponent (forgets the power rule); the other two incorrectly distribute a factor of 3 onto the log_5(25) term as well."
+  },
+  {
+    question: "A radioactive sample starts at 60 mg and has a half-life of 15 days. How much remains after 45 days?",
+    choices: ["7.5 mg", "20 mg", "15 mg", "30 mg"],
+    correctIndex: 0,
+    explanation: "A(45) = 60*(1/2)^(45/15) = 60*(1/2)^3 = 60/8 = 7.5 mg. 20 mg comes from dividing 60 by the number of half-lives (60/3) instead of exponentiating; 15 mg comes from miscounting only 2 half-lives instead of 3; 30 mg applies just one half-life."
+  }
+];
+</script>
+<script src="quiz.js"></script>
+</body>
+</html>

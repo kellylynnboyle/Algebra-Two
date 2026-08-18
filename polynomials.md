@@ -1,5 +1,7 @@
 # Polynomials — Algebra II Study Notes (Unit 2)
 
+[Take the interactive quiz →](quizzes/polynomials.html)
+
 > Per the course syllabus ([course-info.md](course-info.md)), "Polynomials" is Unit 2 of
 > Algebra II (Mrs. Samir / Mr. Schacter, Period 5). The Schoology materials page itself
 > couldn't be reached from this environment (NMUSD login required, domain blocked by

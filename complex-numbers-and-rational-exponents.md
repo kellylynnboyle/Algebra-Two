@@ -1,5 +1,7 @@
 # Complex Numbers and Rational Exponents — Algebra II Study Notes (Unit 3)
 
+[Take the interactive quiz →](quizzes/complex-numbers-and-rational-exponents.html)
+
 > Per the course syllabus ([course-info.md](course-info.md)), "Complex Numbers and Rational
 > Exponents" is Unit 3 of Algebra II (Mrs. Samir / Mr. Schacter, Period 5). The Schoology
 > materials page itself couldn't be reached from this environment (NMUSD login required,

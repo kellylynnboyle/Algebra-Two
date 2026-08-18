@@ -3,6 +3,8 @@
 Companion to [sequences-and-series.md](sequences-and-series.md) — together these cover
 Unit 1 of the course per [course-info.md](course-info.md).
 
+[Take the interactive quiz →](quizzes/functions.html)
+
 ## 1. What Is a Function?
 
 A **relation** is any set of ordered pairs `(x, y)`. A **function** is a relation where

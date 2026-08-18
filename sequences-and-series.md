@@ -1,5 +1,7 @@
 # Sequences and Series — Algebra II Study Notes
 
+[Take the interactive quiz →](quizzes/sequences-and-series.html)
+
 > Per the course syllabus ([course-info.md](course-info.md)), "Sequence and Functions" is
 > Unit 1 of Algebra II (Mrs. Samir / Mr. Schacter, Period 5). The Schoology materials page
 > itself couldn't be reached from this environment (NMUSD login required, domain blocked

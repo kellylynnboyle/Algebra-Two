@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sequences and Series Quiz — Algebra II</title>
+<link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+<div class="quiz-container">
+  <a class="quiz-back" href="../sequences-and-series.md">&larr; Back to notes</a>
+  <h1 id="quiz-title"></h1>
+  <div id="quiz-root"></div>
+</div>
+<script>
+window.QUIZ_TITLE = "Sequences and Series Quiz";
+window.QUIZ_DATA = [
+  {
+    question: "What is the explicit formula for the arithmetic sequence 7, 3, -1, -5, ...?",
+    choices: [
+      "a_n = -4n + 11",
+      "a_n = 4n + 3",
+      "a_n = -4n + 7",
+      "a_n = -4n + 4"
+    ],
+    correctIndex: 0,
+    explanation: "a_1 = 7 and d = 3 - 7 = -4, so a_n = 7 + (n-1)(-4) = 7 - 4n + 4 = -4n + 11."
+  },
+  {
+    question: "A geometric sequence begins 5, 15, 45, 135, ... What is the 6th term?",
+    choices: [
+      "1,215",
+      "3,645",
+      "20",
+      "729"
+    ],
+    correctIndex: 0,
+    explanation: "a_1 = 5, r = 3, so a_6 = a_1 * r^(n-1) = 5 * 3^5 = 5 * 243 = 1,215. Using r^n instead of r^(n-1) gives the tempting-but-wrong 3,645."
+  },
+  {
+    question: "Which recursive formula correctly describes the sequence 8, 5, 2, -1, ...?",
+    choices: [
+      "a_1 = 8, a_n = a_(n-1) - 3",
+      "a_1 = 8, a_n = a_(n-1) + 3",
+      "a_1 = -3, a_n = a_(n-1) + 8",
+      "a_1 = 8, a_n = a_(n-1) * (-3)"
+    ],
+    correctIndex: 0,
+    explanation: "Each term decreases by 3 (a constant difference, not a ratio), so a_1 = 8 and the recursive rule adds -3 to the previous term."
+  },
+  {
+    question: "Evaluate: the sum from k=1 to 6 of (3k - 2).",
+    choices: [
+      "51",
+      "63",
+      "102",
+      "49"
+    ],
+    correctIndex: 0,
+    explanation: "The terms are 1, 4, 7, 10, 13, 16, which sum to 51. Forgetting to subtract 2 each time gives 63; forgetting to divide by 2 in a sum shortcut gives 102."
+  },
+  {
+    question: "Find the sum of the first 20 terms of the arithmetic sequence 6, 11, 16, 21, ...",
+    choices: [
+      "1,070",
+      "1,120",
+      "2,140",
+      "101"
+    ],
+    correctIndex: 0,
+    explanation: "a_1 = 6, d = 5, n = 20: S_20 = 20/2 * (2*6 + 19*5) = 10 * 107 = 1,070. Using n instead of (n-1) when finding a_20 gives the wrong last term and leads to 1,120."
+  },
+  {
+    question: "Find the sum of the first 5 terms of the geometric sequence 4, 12, 36, 108, ...",
+    choices: [
+      "484",
+      "160",
+      "280",
+      "-484"
+    ],
+    correctIndex: 0,
+    explanation: "a_1 = 4, r = 3, n = 5: S_5 = 4*(1 - 3^5)/(1 - 3) = 4*(-242)/(-2) = 484. Using the arithmetic sum formula instead of the geometric one gives the wrong 280."
+  },
+  {
+    question: "Which of these infinite geometric series converges to a finite sum?",
+    choices: [
+      "a_1 = 6, r = -0.5",
+      "a_1 = 10, r = 1.2",
+      "a_1 = 3, r = -2",
+      "a_1 = 5, r = 1"
+    ],
+    correctIndex: 0,
+    explanation: "Convergence requires |r| < 1. Only r = -0.5 satisfies that; a negative ratio just means the terms alternate sign while shrinking toward 0."
+  },
+  {
+    question: "What is the sum of the series: the sum from k=1 to infinity of 12 * (2/3)^k?",
+    choices: [
+      "24",
+      "36",
+      "-16",
+      "The series diverges (no finite sum)"
+    ],
+    correctIndex: 0,
+    explanation: "The first term (at k=1) is 12*(2/3) = 8, and r = 2/3, so S = 8/(1 - 2/3) = 24. Using the coefficient 12 directly as a_1 instead of the actual first term gives the wrong 36."
+  },
+  {
+    question: "A student sees the sequence 5, 20, 80, 320 and subtracts consecutive terms, getting 15, 60, 240 -- not constant. What does this mean, and what should the student do instead?",
+    choices: [
+      "The sequence is geometric, not arithmetic -- divide consecutive terms instead to find r = 4",
+      "The sequence has no pattern, since the differences keep changing",
+      "The sequence is arithmetic with a variable difference averaging 105",
+      "The sequence is geometric with common ratio r = 105, the average difference"
+    ],
+    correctIndex: 0,
+    explanation: "Non-constant differences are the tip-off to check for a constant ratio instead: 20/5 = 80/20 = 320/80 = 4, so the sequence is geometric with r = 4."
+  },
+  {
+    question: "In an arithmetic sequence, the 5th term is 22 and the 12th term is 64. What is the common difference d?",
+    choices: [
+      "6",
+      "3.5",
+      "7",
+      "8.4"
+    ],
+    correctIndex: 0,
+    explanation: "The 5th and 12th terms are 12 - 5 = 7 steps apart, so d = (64 - 22)/7 = 42/7 = 6. Miscounting them as 6 steps apart (instead of 7) gives the trap answer of 7."
+  }
+];
+</script>
+<script src="quiz.js"></script>
+</body>
+</html>
