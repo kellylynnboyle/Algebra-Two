@@ -5,12 +5,17 @@ Source: syllabus PDF provided by the student (Mrs. Samir / Mr. Schacter, Room 41
 ## Course Outline (subject to change)
 
 1. **Sequence and Functions** ← current unit (see [sequences-and-series.md](sequences-and-series.md) and [functions.md](functions.md))
-2. Polynomials
-3. Complex Numbers and Rational Exponents
-4. Exponential Functions and Equations
-5. Transformations of Function
-6. Trigonometric Function
-7. Statistical Inferences (tentative)
+2. Polynomials (see [polynomials.md](polynomials.md))
+3. Complex Numbers and Rational Exponents (see [complex-numbers-and-rational-exponents.md](complex-numbers-and-rational-exponents.md))
+4. Exponential Functions and Equations (see [exponential-functions.md](exponential-functions.md))
+5. Transformations of Function (see [transformations.md](transformations.md))
+6. Trigonometric Function (see [trigonometric-functions.md](trigonometric-functions.md))
+7. Statistical Inferences (tentative) (see [statistical-inferences.md](statistical-inferences.md))
+
+All unit notes are drafted ahead of the class schedule from the syllabus + standard Algebra II
+curriculum, not from Schoology's actual materials for each unit (still inaccessible from this
+environment). Treat them as a study reference to revise against what's actually assigned as
+each unit is reached.
 
 ## Grading
 

@@ -3,7 +3,26 @@ Algebra Two
 
 ## Study Notes
 
-**Unit 1: Sequence and Functions**
 - [Course Info & Syllabus](course-info.md)
+
+**Unit 1: Sequence and Functions**
 - [Sequences and Series](sequences-and-series.md)
 - [Functions](functions.md)
+
+**Unit 2: Polynomials**
+- [Polynomials](polynomials.md)
+
+**Unit 3: Complex Numbers and Rational Exponents**
+- [Complex Numbers and Rational Exponents](complex-numbers-and-rational-exponents.md)
+
+**Unit 4: Exponential Functions and Equations**
+- [Exponential Functions and Equations](exponential-functions.md)
+
+**Unit 5: Transformations of Function**
+- [Transformations of Functions](transformations.md)
+
+**Unit 6: Trigonometric Function**
+- [Trigonometric Functions](trigonometric-functions.md)
+
+**Unit 7: Statistical Inferences (Tentative)**
+- [Statistical Inferences](statistical-inferences.md)
