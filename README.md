@@ -31,7 +31,7 @@ Algebra Two
 
 Interactive, self-checking multiple-choice quizzes (10 questions each) — one per notes file above, plus an [index page](quizzes/index.html). They're plain HTML/CSS/JS with no dependencies or build step.
 
-GitHub shows these as raw source rather than running them, so to actually take a quiz: clone the repo and open the file directly in a browser, or enable GitHub Pages for this repo (Settings → Pages → deploy from the `main` branch) to get shareable links.
+Live at [kellylynnboyle.github.io/Algebra-Two](https://kellylynnboyle.github.io/Algebra-Two/) via GitHub Pages. (Viewing the raw files on github.com instead of the Pages site will show source rather than running them — clone the repo and open the file locally if you ever need that.)
 
 - [Sequences and Series Quiz](quizzes/sequences-and-series.html)
 - [Functions Quiz](quizzes/functions.html)
