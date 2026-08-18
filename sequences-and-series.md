@@ -1,10 +1,11 @@
 # Sequences and Series — Algebra II Study Notes
 
-> Note: The Schoology course page (nmusd.schoology.com/course/8478718366/materials)
-> could not be reached from this environment — it requires an NMUSD login and the
-> domain is blocked by network egress rules here. These notes cover the standard
-> Algebra II "Sequences and Series" unit content instead. Cross-check unit numbers
-> and specific problem sets against what your teacher posts on Schoology.
+> Per the course syllabus ([course-info.md](course-info.md)), "Sequence and Functions" is
+> Unit 1 of Algebra II (Mrs. Samir / Mr. Schacter, Period 5). The Schoology materials page
+> itself couldn't be reached from this environment (NMUSD login required, domain blocked
+> by network egress rules), so the syllabus's specific reading/assignment list for this unit
+> isn't reflected here — these notes cover the standard curriculum for the topic. Paste in
+> specifics from Schoology (subtopic order, vocab list, assigned problems) to refine further.
 
 ## 1. Sequences
 
