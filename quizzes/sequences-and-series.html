@@ -124,6 +124,39 @@ window.QUIZ_DATA = [
     ],
     correctIndex: 0,
     explanation: "The 5th and 12th terms are 12 - 5 = 7 steps apart, so d = (64 - 22)/7 = 42/7 = 6. Miscounting them as 6 steps apart (instead of 7) gives the trap answer of 7."
+  },
+  {
+    question: "Evaluate the sum from k=1 to 10 of k^2 using the closed-form formula.",
+    choices: [
+      "385",
+      "55",
+      "3,025",
+      "110"
+    ],
+    correctIndex: 0,
+    explanation: "Sum of k^2 = n(n+1)(2n+1)/6 = 10*11*21/6 = 2,310/6 = 385. 55 is just the sum of k (n=10), not k^2."
+  },
+  {
+    question: "Which closed form is equal to the sum from k=1 to n of k^3?",
+    choices: [
+      "[n(n+1)/2]^2",
+      "n(n+1)(2n+1)/6",
+      "n(n+1)/2",
+      "n^2(n+1)"
+    ],
+    correctIndex: 0,
+    explanation: "The sum of cubes equals the square of the sum of the first powers: sum(k^3) = [sum(k)]^2 = [n(n+1)/2]^2. The second choice is the sum-of-squares formula, mixed up with sum of cubes."
+  },
+  {
+    question: "Evaluate the sum from k=1 to 6 of 1/(k(k+1)) by telescoping.",
+    choices: [
+      "6/7",
+      "1",
+      "5/6",
+      "1/7"
+    ],
+    correctIndex: 0,
+    explanation: "1/(k(k+1)) = 1/k - 1/(k+1), so the sum telescopes to 1 - 1/(n+1) = n/(n+1). For n=6, that's 6/7. Answering 1 forgets that a finite telescoping sum still leaves a -1/(n+1) piece behind; 5/6 miscounts n as 5 instead of 6."
   }
 ];
 </script>

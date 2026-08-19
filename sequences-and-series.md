@@ -173,3 +173,70 @@ Sequence questions are a small but consistent slice of both tests, and they're m
 2. The series **diverges** — `r = 1.5`, and `|r| ≥ 1`, so there is no finite sum. Plugging into `S = a_1/(1-r) = 8/(1-1.5) = -16` anyway is exactly the "forgot to check convergence" trap; it produces a clean-looking wrong answer.
 
 </details>
+
+## 10. Sigma Notation Properties, Power Sums, and Telescoping Series
+
+These go a level past the basic arithmetic/geometric formulas above — they let you evaluate sums that aren't purely arithmetic or geometric term-by-term.
+
+### Properties of Sigma Notation
+
+For any constant `c` and sequences `a_k`, `b_k`:
+
+```
+Σ (k=1 to n) c        = c * n
+Σ (k=1 to n) c*a_k    = c * Σ a_k
+Σ (k=1 to n) (a_k + b_k) = Σ a_k + Σ b_k
+```
+
+In words: constants factor out of a sum, and a sum of sums splits into separate sums. This is just the distributive property applied to addition — it's what lets you break a complicated sum into pieces you already have formulas for.
+
+### Closed Forms for Power Sums
+
+Three sums come up often enough to memorize:
+
+```
+Σ (k=1 to n) k   = n(n+1)/2
+Σ (k=1 to n) k^2 = n(n+1)(2n+1)/6
+Σ (k=1 to n) k^3 = [n(n+1)/2]^2   (i.e., (Σk)^2 — the sum of cubes is the square of the sum of the first powers)
+```
+
+**Example**: Evaluate `Σ (k=1 to 10) (k^2 - 2k + 3)`.
+
+Split it using the properties above: `Σk^2 - 2Σk + Σ3`.
+- `Σk^2 = 10*11*21/6 = 385`
+- `2Σk = 2*(10*11/2) = 2*55 = 110`
+- `Σ3 = 3*10 = 30`
+
+Total: `385 - 110 + 30 = 305`.
+
+### Telescoping Series
+
+A **telescoping series** is one where, after rewriting each term (often via partial fractions), consecutive terms cancel out, leaving only a few surviving pieces — like closing a telescope.
+
+**Pattern**: `Σ (k=1 to n) [f(k) - f(k+1)] = f(1) - f(n+1)` — every middle term cancels with the next term's leading piece.
+
+**Example**: Evaluate `Σ (k=1 to n) 1/(k(k+1))`.
+
+Partial fractions: `1/(k(k+1)) = 1/k - 1/(k+1)`. So the sum telescopes:
+
+```
+(1/1 - 1/2) + (1/2 - 1/3) + (1/3 - 1/4) + ... + (1/n - 1/(n+1))
+= 1 - 1/(n+1) = n/(n+1)
+```
+
+Check with `n = 5`: direct addition gives `1/2 + 1/6 + 1/12 + 1/20 + 1/30 = 5/6`, matching `n/(n+1) = 5/6`. ✓
+
+### Practice Problems
+
+1. Evaluate `Σ (k=1 to 6) (3k^2 - k)` using the closed forms above.
+2. Verify that `Σ (k=1 to 8) k^3 = (Σ (k=1 to 8) k)^2` by computing both sides.
+3. Evaluate `Σ (k=1 to 4) 1/((k+1)(k+2))` by rewriting the general term with partial fractions and telescoping.
+
+<details>
+<summary>Answers</summary>
+
+1. `Σk^2 (n=6) = 6*7*13/6 = 91`, `Σk (n=6) = 21`. So `3(91) - 21 = 273 - 21 = 252`.
+2. `Σk (n=8) = 8*9/2 = 36`, so `(Σk)^2 = 1296`. `Σk^3 = [8*9/2]^2 = 36^2 = 1296`. They match — direct addition of `1+8+27+64+125+216+343+512` also gives `1296`.
+3. `1/((k+1)(k+2)) = 1/(k+1) - 1/(k+2)`. Telescoping from `k=1` to `4`: `1/2 - 1/6 = 1/3`. Direct check: `1/6 + 1/12 + 1/20 + 1/30 = 10/60+5/60+3/60+2/60 = 20/60 = 1/3`. ✓
+
+</details>
