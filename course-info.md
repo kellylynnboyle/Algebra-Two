@@ -12,10 +12,18 @@ Source: syllabus PDF provided by the student (Mrs. Samir / Mr. Schacter, Room 41
 6. Trigonometric Function (see [trigonometric-functions.md](trigonometric-functions.md))
 7. Statistical Inferences (tentative) (see [statistical-inferences.md](statistical-inferences.md))
 
-All unit notes are drafted ahead of the class schedule from the syllabus + standard Algebra II
-curriculum, not from Schoology's actual materials for each unit (still inaccessible from this
-environment). Treat them as a study reference to revise against what's actually assigned as
-each unit is reached.
+Unit notes are drafted ahead of the class schedule from the syllabus + standard Algebra II
+curriculum; Schoology itself is still inaccessible from this environment (NMUSD login
+required, domain blocked by network egress rules). **Unit 1 is the exception**: the actual
+27-page "UNIT 1 Sequences" packet was uploaded to this repo as `scan_20260819030552.pdf` and
+has been transcribed and folded into [sequences-and-series.md](sequences-and-series.md) — that
+file now tracks the real assigned material (Mathematics Vision Project "Sequences" and "Linear
+and Exponential Functions" modules, plus teacher-made word-problem and extra-practice sheets),
+including its heavy emphasis on recursive formulas, translating between representations, and
+its 4-step word-problem procedure. Note the packet is sequences-only; it doesn't reach
+series/summation, so that part of the notes is still generic curriculum content held in
+reserve for whenever the class gets there. Other units still reflect the standard curriculum
+guess — paste in Schoology specifics as each one is reached.
 
 ## Grading
 

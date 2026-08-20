@@ -124,6 +124,39 @@ window.QUIZ_DATA = [
     ],
     correctIndex: 0,
     explanation: "The 5th and 12th terms are 12 - 5 = 7 steps apart, so d = (64 - 22)/7 = 42/7 = 6. Miscounting them as 6 steps apart (instead of 7) gives the trap answer of 7."
+  },
+  {
+    question: "A car worth $17,000 depreciates 10% each year. Which is the correct recursive formula for its value a(n)?",
+    choices: [
+      "a(1) = 17000, a(n) = a(n-1) * 0.90",
+      "a(1) = 17000, a(n) = a(n-1) - 0.10",
+      "a(1) = 17000, a(n) = a(n-1) - 1700",
+      "a(1) = 17000, a(n) = a(n-1) * 0.10"
+    ],
+    correctIndex: 0,
+    explanation: "A 10% decrease each year means multiplying by (1 - 0.10) = 0.90 each step -- this is geometric/exponential. Subtracting 0.10 or a flat $1,700 would incorrectly turn it into an arithmetic/linear sequence."
+  },
+  {
+    question: "Which of these sequences has a valid recursive formula but NO simple one-step explicit formula?",
+    choices: [
+      "0, 1, 1, 2, 3, 5, 8, ... (Fibonacci: a(n) = a(n-1) + a(n-2))",
+      "5, 8, 11, 14, ... (arithmetic, d = 3)",
+      "6, 12, 24, 48, ... (geometric, r = 2)",
+      "2, 5, 8, 11, ... (arithmetic, d = 3)"
+    ],
+    correctIndex: 0,
+    explanation: "Fibonacci-style sequences depend on TWO previous terms, not a constant difference or ratio from one previous term, so there's no simple a_n = a_1 + (n-1)d or a_1 * r^(n-1) shortcut -- only a recursive rule works cleanly."
+  },
+  {
+    question: "Given a(4) = 5 and a(5) = 8 in an arithmetic sequence, what is the recursive formula a(n)?",
+    choices: [
+      "a(n) = a(n-1) + 3",
+      "a(n) = a(n-1) + 5",
+      "a(n) = a(n-1) * 3",
+      "a(n) = a(n-1) - 3"
+    ],
+    correctIndex: 0,
+    explanation: "d = a(5) - a(4) = 8 - 5 = 3, so each term is the previous term plus 3. (The full recursive formula would also need a starting value like a(1), but the rule itself is a(n) = a(n-1) + 3.)"
   }
 ];
 </script>

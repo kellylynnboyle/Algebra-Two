@@ -29,7 +29,7 @@ Algebra Two
 
 ## Quizzes
 
-Interactive, self-checking multiple-choice quizzes (10 questions each) — one per notes file above, plus an [index page](quizzes/index.html). They're plain HTML/CSS/JS with no dependencies or build step.
+Interactive, self-checking multiple-choice quizzes (10+ questions each) — one per notes file above, plus an [index page](quizzes/index.html). They're plain HTML/CSS/JS with no dependencies or build step.
 
 Live at [kellylynnboyle.github.io/Algebra-Two](https://kellylynnboyle.github.io/Algebra-Two/) via GitHub Pages. (Viewing the raw files on github.com instead of the Pages site will show source rather than running them — clone the repo and open the file locally if you ever need that.)
 
