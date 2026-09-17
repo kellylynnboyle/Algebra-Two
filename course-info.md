@@ -44,3 +44,18 @@ All homework/classwork is submitted through Schoology, which requires an NMUSD l
 environment can't reach directly (network egress + auth). Study notes here are written from
 the syllabus and standard Algebra II curriculum; paste in specific assignment/material details
 from Schoology as they're posted and these notes can be tailored further.
+
+`scan_20260819030552.pdf` (uploaded 2026-08-19) is the actual Unit 1 "Sequences" classwork
+packet — 26 recoverable pages (2 of the original 28 are corrupted in the file and couldn't be
+extracted) mixing IMP, Mathematics Vision Project, McDougal Littell, and Kuta Software
+worksheets. It's been reviewed and its approach (recursive formulas built from patterns using
+`a(1)`/`a(n)`/`a(n-1)` notation, then converted to explicit formulas; word problems requiring
+both forms plus a context sentence) is reflected in [sequences-and-series.md](sequences-and-series.md)
+section 1a. Notably, the packet covers sequences (recursive/explicit) only — no sigma notation
+or series sums appeared in it, so that part of the notes is still unconfirmed against the actual
+class pace.
+
+The PDF itself is malformed (no page tree/xref, likely a cut-off export from the scanning app)
+— standard PDF viewers may report 0 pages. Its images were recovered by reading each `/Image`
+object's raw stream and `zlib`-decompressing it directly (the `/Filter` was `[FlateDecode
+DCTDecode]`, i.e. a zlib-wrapped JPEG per page).

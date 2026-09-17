@@ -4,10 +4,16 @@
 
 > Per the course syllabus ([course-info.md](course-info.md)), "Sequence and Functions" is
 > Unit 1 of Algebra II (Mrs. Samir / Mr. Schacter, Period 5). The Schoology materials page
-> itself couldn't be reached from this environment (NMUSD login required, domain blocked
-> by network egress rules), so the syllabus's specific reading/assignment list for this unit
-> isn't reflected here — these notes cover the standard curriculum for the topic. Paste in
-> specifics from Schoology (subtopic order, vocab list, assigned problems) to refine further.
+> itself still can't be reached from this environment (NMUSD login required, domain blocked
+> by network egress rules). However, the actual Unit 1 classwork packet (26 scanned pages,
+> `scan_20260819030552.pdf`) was uploaded to this repo and has been reviewed — it's a mix of
+> IMP, Mathematics Vision Project, McDougal Littell, and Kuta Software worksheets. That packet
+> is almost entirely about **recursive and explicit formulas for sequences** (using `a(1)`,
+> `a(n)`, `a(n-1)` notation) built up from dot-pattern figures and word problems — it does
+> *not* cover sigma notation or series sums. Section 1a below reflects that packet's actual
+> approach; the series material further down (sections 4+) is standard Algebra II curriculum
+> kept here in case it's covered later in the unit or on assessments, but hasn't been confirmed
+> against Schoology yet.
 
 ## 1. Sequences
 
@@ -25,6 +31,78 @@ A **sequence** is an ordered list of numbers (terms), often written `a_1, a_2, a
   Example: `a_1 = 2, a_n = a_(n-1) + 3` produces the same sequence as above.
 
 To convert recursive → explicit (or vice versa), look for a constant *difference* (arithmetic) or constant *ratio* (geometric) between consecutive terms.
+
+## 1a. Recursive vs. Explicit Formulas (as actually taught in this class)
+
+The classwork packet builds sequences up from **patterns** (dot figures) rather than starting
+from the formulas directly, and uses `a(1)`, `a(n)`, `a(n-1)` function-style notation as much as
+(or more than) subscript notation `a_1`, `a_n`, `a_(n-1)` — they mean the same thing:
+
+| Notation | Meaning |
+|---|---|
+| `a(1)` or `a_1` | 1st term of the sequence |
+| `a(n)` or `a_n` | *n*th term of the sequence |
+| `a(n-1)` or `a_(n-1)` | the term right before `a(n)` |
+
+A **recursive formula** states the first term, then defines each term in terms of the one(s)
+before it — e.g. `a(1) = 13, a(n) = a(n-1) + 4`. It's the natural way to describe a pattern
+(each new figure = previous figure + a fixed number of dots), but to get to the 100th term you'd
+have to grind through every term before it.
+
+An **explicit formula** gives `a(n)` directly in terms of `n` — e.g. `a(n) = 13 + 4(n-1)`. The
+packet builds this by *expanding* the recursive steps in a table:
+
+| Fig # | Dots | Expand |
+|---|---|---|
+| 1 | 13 | `13` |
+| 2 | 17 | `13 + 4` |
+| 3 | 21 | `13 + 4 + 4` |
+| 4 | 25 | `13 + 4 + 4 + 4` |
+| n | | `13 + 4(n-1)` |
+
+The key move: figure `n` has had the common difference added `(n-1)` times, not `n` times,
+since the first term gets zero additions.
+
+**One recursive equation doesn't uniquely determine a sequence** — `a(n) = a(n-1) + 3` fits
+`2, 5, 8, 11, ...` just as well as `21, 24, 27, 30, ...`. You always need the starting value
+too.
+
+### Word problems: write both, then interpret
+
+A recurring problem type gives a real-world setup and asks for the recursive formula, the
+explicit formula, *and* a sentence explaining what the recursive formula means in context.
+For example: a paycheck sequence where `a(n) = a(n-1) + 225` means "each week's balance is
+last week's balance plus another $225 paycheck," while a car-depreciation sequence
+`a(n) = a(n-1) · 0.9` means "each year's value is 90% of last year's value" (10% depreciation).
+Watch for growth/decay problems phrased as a *percent change* — that always signals geometric
+(multiply by `1 ± rate`), not arithmetic (add/subtract a flat amount).
+
+**Practice:**
+
+1. A tree is 4 ft tall when planted and grows 1.5 ft per year. Write a recursive formula for
+   its height, then an explicit formula, then find its height after 12 years.
+2. A $5,000 investment loses 8% of its value every year it's left in a bad fund. Write a
+   recursive formula for its value, then find its value after 6 years.
+3. A figure pattern has 2 dots in figure 1, and each new figure adds 3 more dots than the
+   previous figure added (i.e., the *number added* is itself increasing by 3 each time — figure
+   1→2 adds 3, figure 2→3 adds 6, figure 3→4 adds 9, ...). Is this arithmetic, geometric, or
+   neither? Explain.
+
+<details>
+<summary>Answers</summary>
+
+1. Recursive: `a(1) = 4, a(n) = a(n-1) + 1.5`. Explicit: `a(n) = 4 + 1.5(n-1)`.
+   `a(12) = 4 + 1.5(11) = 4 + 16.5 = 20.5` ft.
+2. Recursive: `a(1) = 5000, a(n) = a(n-1) · 0.92`. `a(6) = 5000(0.92)^5 ≈ 3269.98`, so about
+   $3,269.98 after 6 years (note `n=6` uses exponent `5`, since `a(1)` is the starting amount
+   before any decay has been applied).
+3. **Neither.** The difference between consecutive terms isn't constant (it's `3, 6, 9, ...`,
+   itself an arithmetic sequence), so there's no single common difference — and there's no
+   common ratio either since it's not multiplicative growth. This is a classic "sequence of
+   differences" trap: don't assume arithmetic just because something is changing steadily by a
+   *pattern* rather than a *constant amount*.
+
+</details>
 
 ## 2. Arithmetic Sequences
 
