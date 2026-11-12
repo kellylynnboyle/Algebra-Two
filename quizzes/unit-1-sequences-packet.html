@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 1 Sequences Packet Quiz — Algebra II</title>
+<link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+<div class="quiz-container">
+  <a class="quiz-back" href="../unit-1-sequences-packet-guide.md">&larr; Back to packet guide</a>
+  <h1 id="quiz-title"></h1>
+  <div id="quiz-root"></div>
+</div>
+<script>
+window.QUIZ_TITLE = "Unit 1 Sequences: Packet Quiz";
+window.QUIZ_DATA = [
+  {
+    question: "Which describes the sequence 100, 50, 25, 12.5, ...?",
+    choices: [
+      "Geometric with common ratio 1/2",
+      "Geometric with common ratio 2",
+      "Arithmetic with common difference -50",
+      "Neither arithmetic nor geometric"
+    ],
+    correctIndex: 0,
+    explanation: "Divide next by previous: 50/100 = 25/50 = 1/2 every time, so it is geometric with r = 1/2. The ratio is 1/2, not 2, because you compute next ÷ previous."
+  },
+  {
+    question: "Which describes the sequence 3, 5, 8, 12, ...?",
+    choices: [
+      "Arithmetic with common difference 2",
+      "Neither arithmetic nor geometric",
+      "Geometric with common ratio 5/3",
+      "Arithmetic with common difference 3"
+    ],
+    correctIndex: 1,
+    explanation: "The differences are 2, 3, 4 (not constant) and the ratios are not constant either. It is predictable, but it is neither arithmetic nor geometric."
+  },
+  {
+    question: "In a recursive formula, what does a(n - 1) mean?",
+    choices: [
+      "The nth term minus 1",
+      "The first term of the sequence",
+      "The term just before a(n)",
+      "The term just after a(n)"
+    ],
+    correctIndex: 2,
+    explanation: "a(n - 1) means go back one position in the sequence. It is the previous term, not the value of the term minus 1."
+  },
+  {
+    question: "What are the first four terms of c(1) = 2, c(n) = 2 · c(n - 1) - 1?",
+    choices: [
+      "2, 4, 8, 16",
+      "2, 1, 0, -1",
+      "2, 3, 4, 5",
+      "2, 3, 5, 9"
+    ],
+    correctIndex: 3,
+    explanation: "Double the previous term, then subtract 1: 2·2 - 1 = 3, 2·3 - 1 = 5, 2·5 - 1 = 9."
+  },
+  {
+    question: "What are the first four terms of a(1) = -4, a(n) = a(n - 1) + n?",
+    choices: [
+      "-4, -2, 1, 5",
+      "-4, -3, -2, -1",
+      "-4, -2, 0, 2",
+      "-4, -3, -1, 2"
+    ],
+    correctIndex: 0,
+    explanation: "The amount added is the position number: a(2) = -4 + 2 = -2, a(3) = -2 + 3 = 1, a(4) = 1 + 4 = 5."
+  },
+  {
+    question: "A dot pattern has 13, 17, 21, 25, ... dots. Which explicit formula gives the number of dots in figure n?",
+    choices: [
+      "13 + 4n",
+      "13 + 4(n - 1)",
+      "4 + 13(n - 1)",
+      "13 · 4^(n - 1)"
+    ],
+    correctIndex: 1,
+    explanation: "Figure 1 has 13 with no 4s added yet, so the number of 4s is always one less than the figure number: 13 + 4(n - 1), which simplifies to 4n + 9. Check n = 1: 13."
+  },
+  {
+    question: "A dot pattern has 3, 6, 12, 24, ... dots. Which explicit formula gives the number of dots in figure n?",
+    choices: [
+      "3 · 2^n",
+      "6^(n - 1)",
+      "3 · 2^(n - 1)",
+      "3 + 2(n - 1)"
+    ],
+    correctIndex: 2,
+    explanation: "It is geometric with a(1) = 3 and r = 2, so a(n) = 3 · 2^(n - 1). Only the ratio is raised to the power. Check n = 1: 3 · 2^0 = 3."
+  },
+  {
+    question: "Find the missing terms of the arithmetic sequence 19, __, __, __, 71.",
+    choices: [
+      "36, 53, 62",
+      "29, 39, 49",
+      "45, 58, 64",
+      "32, 45, 58"
+    ],
+    correctIndex: 3,
+    explanation: "There are 4 jumps from 19 to 71 (not 3), so d = (71 - 19)/4 = 13. The terms are 32, 45, 58."
+  },
+  {
+    question: "A geometric sequence has first term 2 and fifth term 162. What could the second, third and fourth terms be?",
+    choices: [
+      "6, 18, 54",
+      "42, 82, 122",
+      "4, 8, 16",
+      "18, 54, 108"
+    ],
+    correctIndex: 0,
+    explanation: "Four jumps: r^4 = 162/2 = 81, so r = 3 (or -3). With r = 3 the terms are 6, 18, 54."
+  },
+  {
+    question: "Sally had $225 after her 1st paycheck and $1275 after her 8th. She is paid the same amount every week. How much is each paycheck?",
+    choices: [
+      "$131.25",
+      "$150",
+      "$159.38",
+      "$1050"
+    ],
+    correctIndex: 1,
+    explanation: "Week 1 to week 8 is 7 jumps, so d = (1275 - 225)/7 = 150. Dividing by 8 instead of 7 gives the wrong answer $131.25."
+  },
+  {
+    question: "A ball is dropped from 15 feet and rebounds to 85% of its previous height each time. About how high does it rebound after its third bounce?",
+    choices: [
+      "10.8 feet",
+      "7.8 feet",
+      "9.2 feet",
+      "12.8 feet"
+    ],
+    correctIndex: 2,
+    explanation: "Each bounce multiplies by 0.85, and three bounces means three multiplications: 15 · 0.85^3 ≈ 9.2 feet. Using only two multiplications (10.8) is the off-by-one trap."
+  },
+  {
+    question: "A car is worth $17,000 and depreciates 10% each year. What is the common ratio of the sequence of yearly values?",
+    choices: [
+      "0.1",
+      "1.1",
+      "-0.1",
+      "0.9"
+    ],
+    correctIndex: 3,
+    explanation: "Losing 10% means keeping 90%, so each year's value is 0.9 times the previous year's. The ratio is what remains, not what is lost."
+  },
+  {
+    question: "f(n) = f(n - 1) - 2 and f(1) = 8. What is the explicit formula?",
+    choices: [
+      "f(n) = 10 - 2n",
+      "f(n) = 8 - 2n",
+      "f(n) = 8n - 2",
+      "f(n) = 6 - 2n"
+    ],
+    correctIndex: 0,
+    explanation: "d = -2 and f(1) = 8, so f(n) = 8 - 2(n - 1) = 10 - 2n. Check: f(1) = 8 and f(2) = 6."
+  },
+  {
+    question: "Laura has $600 and takes out $50 at the end of each month. Which is the domain of the sequence of account balances?",
+    choices: [
+      "All real numbers",
+      "n = 1, 2, 3, ..., 12",
+      "n = 1, 2, 3, ... forever",
+      "All real numbers from 0 to 600"
+    ],
+    correctIndex: 1,
+    explanation: "The balance is 600 - 50n, which reaches $0 at month 12. The domain is the whole-number months 1 through 12; a sequence is a list of separate values, not an interval."
+  }
+];
+</script>
+<script src="quiz.js"></script>
+</body>
+</html>

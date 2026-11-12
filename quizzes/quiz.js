@@ -4,7 +4,18 @@
 
 (function () {
   function init() {
-    const data = window.QUIZ_DATA || [];
+    // Shuffle each question's choices so the correct answer isn't always in the same spot.
+    const data = (window.QUIZ_DATA || []).map((q) => {
+      const order = q.choices.map((_, i) => i);
+      for (let i = order.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [order[i], order[j]] = [order[j], order[i]];
+      }
+      return Object.assign({}, q, {
+        choices: order.map((i) => q.choices[i]),
+        correctIndex: order.indexOf(q.correctIndex),
+      });
+    });
     const title = window.QUIZ_TITLE || "Quiz";
     const root = document.getElementById("quiz-root");
     const titleEl = document.getElementById("quiz-title");

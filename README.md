@@ -6,6 +6,7 @@ Algebra Two
 - [Course Info & Syllabus](course-info.md)
 
 **Unit 1: Sequence and Functions**
+- [Sequences — class packet study guide](unit-1-sequences-packet-guide.md) (follows the actual Unit 1 handouts)
 - [Sequences and Series](sequences-and-series.md)
 - [Functions](functions.md)
 
@@ -29,10 +30,11 @@ Algebra Two
 
 ## Quizzes
 
-Interactive, self-checking multiple-choice quizzes (10 questions each) — one per notes file above, plus an [index page](quizzes/index.html). They're plain HTML/CSS/JS with no dependencies or build step.
+Interactive, self-checking multiple-choice quizzes (10–14 questions each, answer order shuffled on every load) — one per notes file above, plus an [index page](quizzes/index.html). They're plain HTML/CSS/JS with no dependencies or build step.
 
 Live at [kellylynnboyle.github.io/Algebra-Two](https://kellylynnboyle.github.io/Algebra-Two/) via GitHub Pages. (Viewing the raw files on github.com instead of the Pages site will show source rather than running them — clone the repo and open the file locally if you ever need that.)
 
+- [Unit 1 Sequences Packet Quiz](quizzes/unit-1-sequences-packet.html)
 - [Sequences and Series Quiz](quizzes/sequences-and-series.html)
 - [Functions Quiz](quizzes/functions.html)
 - [Polynomials Quiz](quizzes/polynomials.html)
