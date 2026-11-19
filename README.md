@@ -7,6 +7,7 @@ Algebra Two
 
 **Unit 1: Sequence and Functions**
 - [Sequences and Series](sequences-and-series.md)
+  - Packet breakdown: [Part 1](unit-1-packet-part-1.md) · [Part 2](unit-1-packet-part-2.md)
 - [Functions](functions.md)
 
 **Unit 2: Polynomials**
