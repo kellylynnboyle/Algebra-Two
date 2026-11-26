@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 1 Sequences Packet Quiz — Algebra II</title>
+<link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+<div class="quiz-container">
+  <a class="quiz-back" href="../unit-1-sequences-packet-guide.md">&larr; Back to packet guide</a>
+  <h1 id="quiz-title"></h1>
+  <div id="quiz-root"></div>
+</div>
+<script>
+window.QUIZ_TITLE = "Unit 1 Sequences Packet Quiz";
+window.QUIZ_DATA = [
+  {
+    question: "Classify the sequence 64, 48, 36, 27, ...",
+    choices: [
+      "Arithmetic, d = -16",
+      "Geometric, r = 3/4",
+      "Geometric, r = 4/3",
+      "Neither"
+    ],
+    correctIndex: 1,
+    explanation: "The gaps are -16, -12, -9, so it is not arithmetic. Dividing later by earlier gives 48/64 = 36/48 = 27/36 = 3/4 every time, so it is geometric with r = 3/4. Dividing earlier by later gives the upside-down ratio 4/3."
+  },
+  {
+    question: "Which is a complete recursive formula for 5, 8, 11, 14, 17, ...?",
+    choices: [
+      "a(n) = a(n-1) + 3",
+      "a(n) = 3n + 2",
+      "a(1) = 5, a(n) = a(n-1) + 3",
+      "a(1) = 3, a(n) = a(n-1) + 5"
+    ],
+    correctIndex: 2,
+    explanation: "A recursive formula needs the starting term and the rule: a(1) = 5, a(n) = a(n-1) + 3. The rule alone also fits 21, 24, 27, ..., so it does not pin down this sequence. a(n) = 3n + 2 is correct but it is the explicit formula."
+  },
+  {
+    question: "a(1) = -4 and a(n) = a(n-1) + n. What are the first four terms?",
+    choices: [
+      "-4, -2, 1, 5",
+      "-4, -3, -2, -1",
+      "-4, -3, -1, 2",
+      "-4, -2, 0, 2"
+    ],
+    correctIndex: 0,
+    explanation: "You add the term number, and it changes each step: a(2) = -4 + 2 = -2, a(3) = -2 + 3 = 1, a(4) = 1 + 4 = 5. Starting the additions at +1 instead of +2 gives -4, -3, -1, 2."
+  },
+  {
+    question: "A dot pattern follows a(1) = 13, a(n) = a(n-1) + 4. How many dots are in figure 25?",
+    choices: [
+      "113",
+      "100",
+      "109",
+      "105"
+    ],
+    correctIndex: 2,
+    explanation: "Figure 25 has had 24 fours added to the first figure, not 25: 13 + 4(24) = 109. Adding 25 fours gives 113, the off-by-one answer."
+  },
+  {
+    question: "Given f(n) = f(n-1) - 2 and f(1) = 8, what is the explicit formula?",
+    choices: [
+      "f(n) = 8 - 2n",
+      "f(n) = 10 - 2n",
+      "f(n) = 8n - 2",
+      "f(n) = 6 - 2n"
+    ],
+    correctIndex: 1,
+    explanation: "f(n) = 8 - 2(n - 1) = 8 - 2n + 2 = 10 - 2n. Check: f(1) = 8. The formula 8 - 2n gives f(1) = 6, which is wrong; the constant in simplified form is the first term minus d, not the first term."
+  },
+  {
+    question: "Find the missing terms of the arithmetic sequence 29, __, __, __, __, 14.",
+    choices: [
+      "25.25, 21.5, 17.75, 14",
+      "26, 23, 20, 17",
+      "27, 25, 23, 21",
+      "26.5, 24, 21.5, 19"
+    ],
+    correctIndex: 1,
+    explanation: "Four blanks means five jumps from 29 to 14, so d = (14 - 29)/5 = -3, giving 26, 23, 20, 17. Dividing by 4 (the number of blanks) instead of 5 gives d = -3.75."
+  },
+  {
+    question: "A geometric sequence has first term 1/9 and fourth term -3. What is the common ratio?",
+    choices: [
+      "3",
+      "-27",
+      "-3",
+      "-9"
+    ],
+    correctIndex: 2,
+    explanation: "First to fourth is three jumps, so r^3 = -3 / (1/9) = -27 and r = -3. With an odd number of jumps the sign is forced, so r = 3 does not work. -27 is r^3, not r."
+  },
+  {
+    question: "Johnny's car is worth $17,000 after 1 year and loses 10% of its value each year. Which recursive formula models the value?",
+    choices: [
+      "a(1) = 17000, a(n) = a(n-1) - 0.10",
+      "a(1) = 17000, a(n) = a(n-1) * 0.10",
+      "a(1) = 17000, a(n) = a(n-1) - 1700",
+      "a(1) = 17000, a(n) = a(n-1) * 0.90"
+    ],
+    correctIndex: 3,
+    explanation: "Losing 10% means keeping 90%, so multiply by 0.90 each year. Multiplying by 0.10 would leave only 10%. Subtracting 1700 every year is arithmetic and is only right for the first step, because 10% of a smaller value is a smaller amount."
+  },
+  {
+    question: "Viola has 13 baskets left from last year and makes 12 more on each of 15 work days. How many baskets will she have?",
+    choices: [
+      "193",
+      "181",
+      "205",
+      "195"
+    ],
+    correctIndex: 0,
+    explanation: "13 + 12(15) = 193. If you call 13 the first term and use a_n = 13 + 12(n - 1), the answer is term 16, not term 15; plugging in n = 15 gives 181."
+  },
+  {
+    question: "Claire has $300 and takes out half of what is left at the end of each month. Which describes the balance after month n?",
+    choices: [
+      "Arithmetic; 300 - 150n",
+      "Geometric; 300(1/2)^(n-1)",
+      "Arithmetic; 300 - (1/2)n",
+      "Geometric; 300(1/2)^n"
+    ],
+    correctIndex: 3,
+    explanation: "Taking a fixed fraction is multiplying, so it is geometric (exponential). $300 is the balance before month 1, so after n months it has been halved n times: 300(1/2)^n, which gives $150 after month 1. Using n - 1 would say she still has $300 after month 1."
+  }
+];
+</script>
+<script src="quiz.js"></script>
+</body>
+</html>

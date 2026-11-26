@@ -12,9 +12,10 @@ Source: syllabus PDF provided by the student (Mrs. Samir / Mr. Schacter, Room 41
 6. Trigonometric Function (see [trigonometric-functions.md](trigonometric-functions.md))
 7. Statistical Inferences (tentative) (see [statistical-inferences.md](statistical-inferences.md))
 
-All unit notes are drafted ahead of the class schedule from the syllabus + standard Algebra II
+Unit 1 sequences now has a guide built from the scanned class packet
+([unit-1-sequences-packet-guide.md](unit-1-sequences-packet-guide.md)). The other unit notes are drafted ahead of the class schedule from the syllabus + standard Algebra II
 curriculum, not from Schoology's actual materials for each unit (still inaccessible from this
-environment). Treat them as a study reference to revise against what's actually assigned as
+environment — uploading a scan of a unit's packet to this repo is what makes tailored notes possible). Treat them as a study reference to revise against what's actually assigned as
 each unit is reached.
 
 ## Grading

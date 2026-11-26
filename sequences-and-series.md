@@ -2,12 +2,12 @@
 
 [Take the interactive quiz →](quizzes/sequences-and-series.html)
 
-> Per the course syllabus ([course-info.md](course-info.md)), "Sequence and Functions" is
-> Unit 1 of Algebra II (Mrs. Samir / Mr. Schacter, Period 5). The Schoology materials page
-> itself couldn't be reached from this environment (NMUSD login required, domain blocked
-> by network egress rules), so the syllabus's specific reading/assignment list for this unit
-> isn't reflected here — these notes cover the standard curriculum for the topic. Paste in
-> specifics from Schoology (subtopic order, vocab list, assigned problems) to refine further.
+> **Start with the [Unit 1 class packet study guide](unit-1-sequences-packet-guide.md)** — it
+> follows the scanned class packet page by page. The packet covers arithmetic and geometric
+> sequences, recursive and explicit formulas, and word problems. It does **not** cover series,
+> sigma notation, or sum formulas, so sections 4 and parts of 5–9 below go beyond what the
+> packet asks for. The Schoology materials page itself still can't be reached from this
+> environment (NMUSD login required, domain blocked by network egress rules).
 
 ## 1. Sequences
 

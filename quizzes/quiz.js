@@ -4,7 +4,40 @@
 
 (function () {
   function init() {
-    const data = window.QUIZ_DATA || [];
+    const source = window.QUIZ_DATA || [];
+
+    // Shuffle the answer choices of every question (Fisher-Yates) so the correct
+    // answer's position can't be memorized or guessed from a pattern.
+    // Explanations were written against the original A-D order. Since the order is
+    // shuffled, swap references like "Choice B" for the text of that choice.
+    function unletter(q) {
+      return (q.explanation || "").replace(
+        /\b(choices?)\s+([A-D](?:(?:\/|,? and |, )[A-D])*)(?![A-Za-z0-9])/gi,
+        (match, word, letters) =>
+          letters.replace(/[A-D]/g, (letter) => {
+            const text = q.choices[letter.charCodeAt(0) - 65];
+            return text === undefined ? letter : `\u201c${text}\u201d`;
+          })
+      );
+    }
+
+    function shuffled() {
+      return source.map((q) => {
+        const order = q.choices.map((_, i) => i);
+        for (let i = order.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [order[i], order[j]] = [order[j], order[i]];
+        }
+        return {
+          question: q.question,
+          choices: order.map((i) => q.choices[i]),
+          correctIndex: order.indexOf(q.correctIndex),
+          explanation: unletter(q),
+        };
+      });
+    }
+
+    let data = shuffled();
     const title = window.QUIZ_TITLE || "Quiz";
     const root = document.getElementById("quiz-root");
     const titleEl = document.getElementById("quiz-title");
@@ -137,6 +170,7 @@
       restartBtn.addEventListener("click", () => {
         current = 0;
         score = 0;
+        data = shuffled();
         render();
       });
       actions.appendChild(restartBtn);
